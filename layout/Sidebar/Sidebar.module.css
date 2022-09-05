@@ -1,0 +1,9 @@
+.sidebar {
+	grid-area: sidebar;
+}
+
+@media screen and (max-width: 760px) {
+	.sidebar {
+		display: none;
+	}
+}
