@@ -1,0 +1,31 @@
+.input {
+	border-color: transparent;
+	border-radius: 8px;
+	padding: 7px 8px;
+	outline: none;
+	background-color: var(--white);
+	width: 100%;
+	background-clip: padding-box;
+	color: var(--black);
+}
+
+.expandingInput:focus,
+.input:focus {
+	border-color: var(--black-blue);
+	box-shadow: 0 0 0 2px var(--black-blue);
+}
+
+.input::placeholder {
+	opacity: 0 4;
+}
+
+.container {
+	width: 100%;
+}
+
+.label {
+	margin-left: 2px;
+	margin-bottom: 2px;
+	display: block;
+	color: var(--white);
+}

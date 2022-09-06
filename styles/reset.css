@@ -385,8 +385,13 @@ h5 {
 
 ul {
 	padding: 0;
+	margin: 0;
 }
 
 li {
 	list-style: none;
+}
+
+button {
+	cursor: pointer;
 }

@@ -1,0 +1,15 @@
+.button {
+	border: none;
+	padding: 5px 10px;
+	border-radius: 10px;
+	color: var(--white);
+}
+
+.fill {
+	background-color: var(--black-blue);
+}
+
+.outlined {
+	background-color: transparent;
+	border: 2px solid var(--black-white);
+}

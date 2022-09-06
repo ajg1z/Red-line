@@ -1,0 +1,22 @@
+.search {
+	position: relative;
+}
+
+.input {
+	padding-right: 35px;
+}
+
+.searchIcon {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	width: 20px;
+	height: 20px;
+	fill: var(--black-white);
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.searchIcon:hover {
+	scale: 1.2;
+}

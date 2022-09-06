@@ -1,17 +1,99 @@
 .header {
 	grid-area: header;
-	background-color: #838bfe;
-	/* padding: 15px 100px; */
+	background-color: var(--white-blue);
 }
 
 .logo {
 	text-transform: uppercase;
 	font-size: 22px;
 	margin: 0;
+	white-space: nowrap;
 }
 
 .container {
 	margin: 0 auto;
 	max-width: 1290px;
-	padding: 15px;
+	padding: 10px 15px;
+	display: grid;
+	grid-template-columns: auto 1fr auto auto minmax(auto, 100px);
+	align-items: center;
+	gap: 30px;
+}
+
+.menuList {
+	display: flex;
+	align-items: baseline;
+	column-gap: 20px;
+}
+
+.menuItem {
+	height: 100%;
+}
+
+.search {
+	max-width: 240px;
+}
+
+.extraOptions {
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+.arrowIcon {
+	margin-left: 5px;
+	width: 10px;
+	height: 10px;
+	transform: rotate(90deg);
+}
+
+.mobMenu {
+	background-color: transparent;
+	border-radius: 5px;
+	border: 1px solid var(--white);
+	width: 40px;
+	padding-top: 4px;
+	display: none;
+}
+
+.profile {
+	justify-self: end;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+}
+
+.profile svg {
+	transition: all 0.2s ease;
+}
+
+.profile:hover svg {
+	fill: var(--black-white);
+}
+
+@media screen and (max-width: 780px) {
+	.container {
+		grid-template-columns: auto 1fr auto;
+		gap: 20px;
+	}
+
+	.menu,
+	.extraOptions,
+	.profile {
+		display: none;
+	}
+
+	.mobMenu {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.logo {
+		font-size: 18px;
+	}
+
+	.container {
+		gap: 10px;
+	}
 }
