@@ -1,12 +1,13 @@
 .input {
+	width: 100%;
+	padding: 7px 8px;
+
+	color: var(--black);
 	border-color: transparent;
 	border-radius: 8px;
-	padding: 7px 8px;
 	outline: none;
 	background-color: var(--white);
-	width: 100%;
 	background-clip: padding-box;
-	color: var(--black);
 }
 
 .expandingInput:focus,
@@ -24,8 +25,10 @@
 }
 
 .label {
-	margin-left: 2px;
-	margin-bottom: 2px;
 	display: block;
+
+	margin-bottom: 2px;
+	margin-left: 2px;
+
 	color: var(--white);
 }

@@ -1,22 +1,26 @@
 .header {
 	grid-area: header;
+
 	background-color: var(--white-blue);
 }
 
 .logo {
-	text-transform: uppercase;
-	font-size: 22px;
 	margin: 0;
+
 	white-space: nowrap;
+	text-transform: uppercase;
+
+	font-size: 22px;
 }
 
 .container {
-	margin: 0 auto;
-	max-width: 1290px;
-	padding: 10px 15px;
 	display: grid;
-	grid-template-columns: auto 1fr auto auto minmax(auto, 100px);
 	align-items: center;
+
+	max-width: 1290px;
+	margin: 0 auto;
+	padding: 10px 15px;
+	grid-template-columns: auto 1fr auto auto minmax(auto, 100px);
 	gap: 30px;
 }
 
@@ -35,32 +39,68 @@
 }
 
 .extraOptions {
-	cursor: pointer;
 	white-space: nowrap;
+	background-color: transparent;
+	border: none;
 }
 
 .arrowIcon {
-	margin-left: 5px;
 	width: 10px;
 	height: 10px;
+	margin-left: 5px;
+
 	transform: rotate(90deg);
 }
 
-.mobMenu {
-	background-color: transparent;
-	border-radius: 5px;
-	border: 1px solid var(--white);
+.burger {
+	display: none;
+
 	width: 40px;
 	padding-top: 4px;
+
+	border: 1px solid var(--white);
+	border-radius: 5px;
+	background-color: transparent;
+}
+
+.mobMenu {
 	display: none;
+	background-color: inherit;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	padding: 0 15px;
+	transition: all 0.3s ease-in-out;
+	border-top: 1px solid var(--black-white);
+}
+
+.openMenu {
+	transition: all 0.3s ease;
+	padding: 10px 15px;
+	height: 155px;
+}
+
+.mobMenu li {
+	margin-bottom: 10px;
+}
+
+.mobMenu li:last-child {
+	margin-bottom: 0;
 }
 
 .profile {
 	justify-self: end;
+
 	display: flex;
 	align-items: center;
 	gap: 10px;
+
 	cursor: pointer;
+}
+
+.profile button {
+	background-color: transparent;
+	border: none;
 }
 
 .profile svg {
@@ -83,8 +123,14 @@
 		display: none;
 	}
 
+	.burger,
 	.mobMenu {
 		display: block;
+	}
+
+	.menuList {
+		flex-direction: column;
+		margin-bottom: 10px;
 	}
 }
 
@@ -96,4 +142,18 @@
 	.container {
 		gap: 10px;
 	}
+}
+
+.visibleOptions {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.visibleProfile {
+	display: block;
+	/* margin-bottom: 10px; */
+}
+
+.visibleProfile button {
+	font-weight: 600;
 }

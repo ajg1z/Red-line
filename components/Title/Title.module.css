@@ -1,0 +1,16 @@
+.h1 {
+	font-size: 32px;
+}
+
+.h2 {
+	font-size: 24px;
+}
+
+.h3 {
+	font-size: 18px;
+}
+
+.title {
+	font-weight: 500;
+	color: var(--bold-black-white);
+}

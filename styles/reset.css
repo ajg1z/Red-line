@@ -37,12 +37,6 @@ main {
    * `article` contexts in Chrome, Firefox, and Safari.
    */
 
-h1 {
-	margin: 0.67em 0;
-
-	font-size: 2em;
-}
-
 /* Grouping content
      ========================================================================== */
 
@@ -373,25 +367,15 @@ template {
 	display: none;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5 {
+* {
 	margin: 0;
 	padding: 0;
-}
-
-ul {
-	padding: 0;
-	margin: 0;
 }
 
 li {
 	list-style: none;
 }
 
-button {
+.button {
 	cursor: pointer;
 }

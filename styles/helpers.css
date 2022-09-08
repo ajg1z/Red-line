@@ -1,0 +1,12 @@
+.visual-hidden {
+	position: absolute;
+
+	overflow: hidden;
+
+	width: 0;
+	height: 0;
+}
+
+.visual-visible {
+	display: block;
+}

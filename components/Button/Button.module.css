@@ -1,8 +1,9 @@
 .button {
-	border: none;
 	padding: 5px 10px;
-	border-radius: 10px;
+
 	color: var(--white);
+	border: none;
+	border-radius: 10px;
 }
 
 .fill {
@@ -10,6 +11,6 @@
 }
 
 .outlined {
-	background-color: transparent;
 	border: 2px solid var(--black-white);
+	background-color: transparent;
 }

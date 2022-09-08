@@ -1,16 +1,18 @@
 @import "./reset.css";
+@import "./helpers.css";
 
 html,
 body {
 	margin: 0;
 	padding: 0;
+	font-weight: 400;
+	color: var(--black-white);
 
 	background-color: var(--background);
 
 	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
 		"Lucida Sans", Arial, sans-serif;
 	font-size: var(--font-size);
-	color: var(--black-white);
 }
 
 a {
@@ -23,16 +25,10 @@ a {
 	box-sizing: border-box;
 }
 
-.visual-hidden {
-	position: absolute;
-
-	overflow: hidden;
-
-	width: 0;
-	height: 0;
-}
-
 :root {
+	--font-size: 15px;
+
+	--bold-black-white: #453d3d;
 	--black-white: #585858;
 	--black-blue: #5963ec;
 	--gray: #a3a6c5;
