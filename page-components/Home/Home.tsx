@@ -1,12 +1,15 @@
 import React from "react";
 import Bolder from "../../components/Bolder/Bolder";
+import BookCard from "../../components/BookCard/BookCard";
 import Divider from "../../components/Divider/Divider";
 import Paragraph from "../../components/Paragraph/Paragraph";
 import Title from "../../components/Title/Title";
+import Top from "./components/Top/Top";
+import { TopOptions } from "./constans";
 import styles from "./Home.module.css";
 import { HomeProps } from "./Home.types";
 
-const HomePage: React.FC<HomeProps> = ({ comments, readed, users, works }) => {
+const HomePage: React.FC<HomeProps> = ({ statistics, topProses }) => {
 	return (
 		<div className={styles.home}>
 			<Title className={styles.mainTitle} tag="h1">
@@ -37,6 +40,28 @@ const HomePage: React.FC<HomeProps> = ({ comments, readed, users, works }) => {
 				оставлено <Bolder> 853403</Bolder> комментариев.
 			</Paragraph>
 			<Divider />
+			<Top
+				title="Лучшая проза"
+				sortTypes={TopOptions}
+				sortLabel="за последние"
+			/>
+			{topProses &&
+				topProses.length &&
+				topProses.map((prose) => {
+					return (
+						<BookCard
+							author={prose.author}
+							formWork={prose.formWork}
+							genres={prose.genres}
+							id={prose.id}
+							title={prose.title}
+							img={prose.img}
+							description={prose.description}
+							tags={prose.tags}
+							size="small"
+						/>
+					);
+				})}
 		</div>
 	);
 };
