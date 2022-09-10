@@ -3,7 +3,7 @@ import { DividerProps } from "./Divider.types";
 import styles from "./Divider.module.css";
 import cn from "classnames";
 
-const Divider = React.forwardRef(
+export const Divider = React.forwardRef(
 	(
 		{ className, margin, ...args }: DividerProps,
 		ref: ForwardedRef<HTMLHRElement>
@@ -21,5 +21,3 @@ const Divider = React.forwardRef(
 		);
 	}
 );
-
-export default Divider;

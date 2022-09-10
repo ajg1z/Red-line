@@ -1,15 +1,32 @@
-import type { NextPage } from "next";
-import Button from "../components/Button/Button";
-import Input from "../components/Input/Input";
-import { MainLayout } from "../layout/layout";
-import HomePage from "../page-components/Home/Home";
+import type { GetStaticProps, NextPage } from "next";
+import { $api } from "../api";
+import { BookChard } from "../interfaces/book.interface";
+import { CommentItem } from "../interfaces/comment.interface";
+import { withLayout } from "../layout/layout";
+import HomePage, { HomeData, HomeProps } from "../page-components/Home/index";
 
-const Home: NextPage = () => {
-	return (
-		<MainLayout>
-			<HomePage comments={0} readed={0} users={0} works={0} />
-		</MainLayout>
-	);
+const Home: NextPage<HomeProps> = (props) => {
+	return <HomePage {...props} />;
 };
 
-export default Home;
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+	try {
+		const { data } = await $api.get<HomeData>("/home");
+		const { data: lastComments } = await $api.get<CommentItem[]>(
+			"/last-comments"
+		);
+		const { data: promotedBooks } = await $api.get<BookChard[]>(
+			"/promoted-books"
+		);
+		return {
+			props: { ...data, lastComments, promotedBooks },
+		};
+	} catch (e) {
+		console.log(e);
+		return {
+			notFound: true,
+		};
+	}
+};
+
+export default withLayout(Home);

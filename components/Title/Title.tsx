@@ -3,7 +3,12 @@ import React from "react";
 import styles from "./Title.module.css";
 import { TitleProps } from "./Title.types";
 
-const Title: React.FC<TitleProps> = ({ className, children, tag, ...args }) => {
+export const Title: React.FC<TitleProps> = ({
+	className,
+	children,
+	tag,
+	...args
+}) => {
 	switch (tag) {
 		case "h1":
 			return (
@@ -27,5 +32,3 @@ const Title: React.FC<TitleProps> = ({ className, children, tag, ...args }) => {
 			return <></>;
 	}
 };
-
-export default Title;

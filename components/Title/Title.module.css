@@ -11,6 +11,7 @@
 }
 
 .title {
-	font-weight: 500;
 	color: var(--bold-black-white);
+
+	font-weight: 500;
 }

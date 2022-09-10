@@ -3,7 +3,7 @@ import styles from "./Paragraph.module.css";
 import { ParagraphProps } from "./Paragraph.types";
 import cn from "classnames";
 
-const Paragraph: React.FC<ParagraphProps> = ({
+export const Paragraph: React.FC<ParagraphProps> = ({
 	className,
 	children,
 	...args
@@ -14,5 +14,3 @@ const Paragraph: React.FC<ParagraphProps> = ({
 		</p>
 	);
 };
-
-export default Paragraph;

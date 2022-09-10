@@ -1,8 +1,7 @@
 import React from "react";
 import { TopProps } from "./Top.types";
 import styles from "./Top.module.css";
-import Title from "../../../../components/Title/Title";
-import Paragraph from "../../../../components/Paragraph/Paragraph";
+import { Paragraph, Title } from "../../../../components";
 
 const Top: React.FC<TopProps> = ({
 	title,

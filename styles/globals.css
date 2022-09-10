@@ -3,16 +3,24 @@
 
 html,
 body {
+	overflow-x: hidden;
+
 	margin: 0;
 	padding: 0;
-	font-weight: 400;
+
 	color: var(--black-white);
 
 	background-color: var(--background);
 
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-		"Lucida Sans", Arial, sans-serif;
+	font-family:
+		"Trebuchet MS",
+		"Lucida Sans Unicode",
+		"Lucida Grande",
+		"Lucida Sans",
+		Arial,
+		sans-serif;
 	font-size: var(--font-size);
+	font-weight: 400;
 }
 
 a {
@@ -27,7 +35,7 @@ a {
 
 :root {
 	--font-size: 15px;
-
+	--link-color: #202ab6;
 	--bold-black-white: #453d3d;
 	--black-white: #585858;
 	--black-blue: #5963ec;

@@ -1,17 +1,15 @@
 import cn from "classnames";
-import Image from "next/image";
-import Link from "next/link";
 import React, { ForwardedRef } from "react";
-import { DefaultParams, FormWorks, Pages } from "../../global-constans";
+import { DefaultParams, Pages } from "../../global-constans";
 import { isProse } from "../../helpers/functions";
-import Paragraph from "../Paragraph/Paragraph";
-import Title from "../Title/Title";
+import { Paragraph } from "../Paragraph/Paragraph";
 import styles from "./BookCard.module.css";
 import { BookCardProps } from "./BookCard.types";
+import { Link } from "../Link/Link";
 
 const { defaultImage, domainUrl } = DefaultParams;
 
-const BookCard = React.forwardRef(
+export const BookCard = React.forwardRef(
 	(
 		{
 			genres,
@@ -19,7 +17,7 @@ const BookCard = React.forwardRef(
 			img,
 			tags,
 			description,
-			size,
+			size = "normal",
 			author,
 			id,
 			formWork,
@@ -29,36 +27,70 @@ const BookCard = React.forwardRef(
 		ref: ForwardedRef<HTMLDivElement>
 	) => {
 		return (
-			<div ref={ref} className={cn(styles.container, className)} {...args}>
+			<div
+				ref={ref}
+				className={cn(styles.container, className, {
+					[styles.smallSize]: size === "small",
+				})}
+				{...args}
+			>
 				{/* <Image src={domainUrl + (img || defaultImage)} /> */}
 				<div className={styles.mockImage}></div>
 				<div className={styles.content}>
-					<Link href={id}>
-						<a className={styles.title}>{title}</a>
+					<Link className={styles.title} href={`/${id}`}>
+						{title}
 					</Link>
 					{author && <p className={styles.author}>{author}</p>}
 					<ul className={styles.genres}>
-						<li className={styles.formWork}>{formWork}</li>
+						<li className={cn(styles.formWork, styles.genre)}>
+							<Link
+								href={{
+									href: isProse(formWork) ? Pages.Prose : Pages.Poem,
+									query: {
+										formWork,
+									},
+								}}
+							>
+								{formWork}
+							</Link>
+						</li>
+						/
 						{genres.map((genre) => {
-							return <li className={styles.genre}>{genre}</li>;
+							return (
+								<li key={genre} className={styles.genre}>
+									<Link
+										href={{
+											href: isProse(formWork) ? Pages.Prose : Pages.Poem,
+											query: {
+												category: genre,
+											},
+										}}
+									>
+										{genre}
+									</Link>
+								</li>
+							);
 						})}
 					</ul>
-					{description && (
-						<Paragraph className={styles.description}>{description}</Paragraph>
-					)}
+					<Paragraph className={styles.description}>
+						{description ? description : "Аннотация отсутствует"}
+					</Paragraph>
 					{tags && tags.length && (
 						<div className={styles.tagBlock}>
 							<p>Теги:</p>
 							<ul className={styles.tags}>
 								{tags.map((tag) => {
 									return (
-										<li className={styles.tag}>
+										<li key={tag} className={styles.tag}>
 											<Link
 												href={{
 													href: isProse(formWork) ? Pages.Prose : Pages.Poem,
+													query: {
+														tag,
+													},
 												}}
 											>
-												<a>{tag}</a>
+												{tag}
 											</Link>
 										</li>
 									);
@@ -71,5 +103,3 @@ const BookCard = React.forwardRef(
 		);
 	}
 );
-
-export default BookCard;

@@ -3,12 +3,14 @@ import styles from "./Bolder.module.css";
 import { BolderProps } from "./Bolder.types";
 import cn from "classnames";
 
-const Bolder: React.FC<BolderProps> = ({ className, children, ...args }) => {
+export const Bolder: React.FC<BolderProps> = ({
+	className,
+	children,
+	...args
+}) => {
 	return (
 		<span className={cn(styles.bolder, className)} {...args}>
 			{children}
 		</span>
 	);
 };
-
-export default Bolder;

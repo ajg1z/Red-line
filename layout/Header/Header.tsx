@@ -2,12 +2,11 @@ import React from "react";
 import { HeaderProps } from "./Header.types";
 import styles from "./Header.module.css";
 import Link from "next/link";
-import Search from "../../components/Search/Search";
 import ArrowIcon from "./icons/arrow.svg";
 import UserIcon from "./icons/user.svg";
 import MenuIcon from "./icons/menu.svg";
 import cn from "classnames";
-import { motion } from "framer-motion";
+import { Search } from "../../components";
 
 export const MENU_ITEMS = [
 	{ label: "Люди", link: `/users` },

@@ -1,3 +1,26 @@
 .footer {
-	grid-area: footer;
+	width: 100%;
+	margin-top: 20px;
+	padding: 20px 50px;
+
+	border-top: 1px solid var(--black-white);
+}
+
+.text {
+	margin: 0 auto;
+
+	text-align: center;
+}
+
+.menuList {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+	row-gap: 10px;
+}
+
+.menu {
+	margin-bottom: 10px;
 }

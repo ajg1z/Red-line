@@ -1,11 +1,11 @@
 import React from "react";
-import Input from "../Input/Input";
+import { Input } from "../Input/Input";
 import styles from "./Search.module.css";
 import { SearchProps } from "./Search.types";
 import SearchIcon from "./search.svg";
 import cn from "classnames";
 
-const Search: React.FC<SearchProps> = ({
+export const Search: React.FC<SearchProps> = ({
 	className,
 	placeholder,
 	classInput,
@@ -21,5 +21,3 @@ const Search: React.FC<SearchProps> = ({
 		</div>
 	);
 };
-
-export default Search;

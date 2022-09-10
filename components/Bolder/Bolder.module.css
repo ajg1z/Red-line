@@ -1,4 +1,5 @@
 .bolder {
-	font-weight: 600;
 	color: var(--bold-black-white);
+
+	font-weight: 600;
 }

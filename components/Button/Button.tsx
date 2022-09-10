@@ -3,7 +3,7 @@ import styles from "./Button.module.css";
 import { ButtonProps } from "./Button.types";
 import cn from "classnames";
 
-const Button = React.forwardRef(
+export const Button = React.forwardRef(
 	(
 		{ className, variant = "outlined", children, ...args }: ButtonProps,
 		ref: ForwardedRef<HTMLButtonElement>
@@ -22,5 +22,3 @@ const Button = React.forwardRef(
 		);
 	}
 );
-
-export default Button;

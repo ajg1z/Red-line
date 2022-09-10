@@ -5,3 +5,39 @@
 .text {
 	margin-bottom: 10px;
 }
+
+.divider {
+	background-color: #817e7e;
+}
+
+.tops {
+	margin-bottom: 20px;
+}
+
+.notRated {
+	display: flex;
+	justify-content: space-between;
+	column-gap: 20px;
+}
+
+.topsDivider {
+	display: none;
+}
+
+.poems {
+	flex: 50%;
+}
+
+.proses {
+	flex: 50%;
+}
+
+@media screen and (max-width: 780px) {
+	.notRated {
+		flex-direction: column;
+	}
+
+	.topsDivider {
+		display: block;
+	}
+}

@@ -8,7 +8,7 @@ export interface BookCardProps
 	description?: string;
 	tags?: string[];
 	size?: "normal" | "small";
-	author: string;
+	author?: string;
 	id: string;
 	formWork: string;
 }

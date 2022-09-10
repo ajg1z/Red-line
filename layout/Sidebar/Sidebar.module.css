@@ -1,5 +1,16 @@
 .sidebar {
-	grid-area: sidebar;
+	flex: 1 1 25%;
+
+	padding: 15px;
+}
+
+.title {
+	margin-bottom: 15px;
+}
+
+.bookItem,
+.comment {
+	margin-bottom: 20px;
 }
 
 @media screen and (max-width: 780px) {

@@ -1,12 +1,14 @@
 .container {
-	background-color: #9ba1f3;
-	padding: 10px;
-	border-radius: 5px;
+	margin-bottom: 20px;
+
+	padding-bottom: 5px;
+	border-bottom: 1px solid var(--black-white);
 }
 
 .top {
 	display: flex;
 	gap: 20px;
+
 	align-items: center;
 }
 
@@ -24,11 +26,23 @@
 }
 
 .sortType button {
-	background-color: transparent;
-	border: none;
 	cursor: pointer;
+
+	border: none;
+	background-color: transparent;
 }
 
 .description {
 	margin-top: 10px;
+}
+
+@media screen and (max-width: 480px) {
+	.top {
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.description {
+		text-align: center;
+	}
 }

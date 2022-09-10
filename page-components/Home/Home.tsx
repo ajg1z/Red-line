@@ -1,15 +1,24 @@
-import React from "react";
-import Bolder from "../../components/Bolder/Bolder";
-import BookCard from "../../components/BookCard/BookCard";
-import Divider from "../../components/Divider/Divider";
-import Paragraph from "../../components/Paragraph/Paragraph";
-import Title from "../../components/Title/Title";
+import React, { Fragment } from "react";
 import Top from "./components/Top/Top";
 import { TopOptions } from "./constans";
 import styles from "./Home.module.css";
 import { HomeProps } from "./Home.types";
+import {
+	Bolder,
+	Button,
+	Divider,
+	Paragraph,
+	Title,
+	BookCard,
+} from "../../components";
+import cn from "classnames";
 
-const HomePage: React.FC<HomeProps> = ({ statistics, topProses }) => {
+const HomePage: React.FC<HomeProps> = ({
+	statistics,
+	topProses,
+	topPoem,
+	notRated,
+}) => {
 	return (
 		<div className={styles.home}>
 			<Title className={styles.mainTitle} tag="h1">
@@ -34,23 +43,19 @@ const HomePage: React.FC<HomeProps> = ({ statistics, topProses }) => {
 			</Paragraph>
 			<Divider />
 			<Paragraph>
-				Зарегистрировано <Bolder>72200</Bolder> человек, опубликовано
-				<Bolder> 344155 </Bolder>
-				произведений, их прочитали <Bolder> 53102639</Bolder> раз, к ним
-				оставлено <Bolder> 853403</Bolder> комментариев.
+				Зарегистрировано <Bolder>{statistics.users}</Bolder> человек,
+				опубликовано
+				<Bolder> {statistics.works} </Bolder>
+				произведений, их прочитали <Bolder> {statistics.readed}</Bolder> раз, к
+				ним оставлено <Bolder> {statistics.comments}</Bolder> комментариев.
 			</Paragraph>
 			<Divider />
-			<Top
-				title="Лучшая проза"
-				sortTypes={TopOptions}
-				sortLabel="за последние"
-			/>
-			{topProses &&
-				topProses.length &&
-				topProses.map((prose) => {
-					return (
+			<Top title="Лучшая проза" sortTypes={TopOptions} sortLabel="за" />
+			{topProses.map((prose, index) => {
+				return (
+					<div key={prose.id} className={styles.tops}>
+						{index !== 0 && <Divider margin={15} className={styles.divider} />}
 						<BookCard
-							author={prose.author}
 							formWork={prose.formWork}
 							genres={prose.genres}
 							id={prose.id}
@@ -60,8 +65,81 @@ const HomePage: React.FC<HomeProps> = ({ statistics, topProses }) => {
 							tags={prose.tags}
 							size="small"
 						/>
-					);
-				})}
+					</div>
+				);
+			})}
+
+			<Top title="Лучшие стихи" sortTypes={TopOptions} sortLabel={"за"} />
+			{topPoem.map((poem, index) => {
+				return (
+					<div key={poem.id} className={styles.tops}>
+						{index !== 0 && <Divider margin={15} className={styles.divider} />}
+						<BookCard
+							formWork={poem.formWork}
+							genres={poem.genres}
+							id={poem.id}
+							title={poem.title}
+							img={poem.img}
+							description={poem.description}
+							tags={poem.tags}
+							size="small"
+						/>
+					</div>
+				);
+			})}
+
+			<Top
+				title="Без оценок"
+				description="Произведения, опубликованные более двух недель назад, но не получившие ни одной оценки. Давайте оценим их!"
+			/>
+			<div className={styles.notRated}>
+				<div className={styles.poems}>
+					{notRated.poems.map((poem, index) => {
+						return (
+							<div key={poem.id}>
+								{index !== 0 && (
+									<Divider margin={15} className={styles.divider} />
+								)}
+								<BookCard
+									formWork={poem.formWork}
+									genres={poem.genres}
+									id={poem.id}
+									title={poem.title}
+									img={poem.img}
+									description={poem.description}
+									tags={poem.tags}
+									size="small"
+								/>
+							</div>
+						);
+					})}
+				</div>
+				<Divider
+					margin={15}
+					className={cn(styles.divider, styles.topsDivider)}
+				/>
+				<div className={styles.proses}>
+					{notRated.proses.map((prose, index) => {
+						return (
+							<div key={prose.id}>
+								{index !== 0 && (
+									<Divider margin={15} className={styles.divider} />
+								)}
+								<BookCard
+									formWork={prose.formWork}
+									genres={prose.genres}
+									id={prose.id}
+									title={prose.title}
+									img={prose.img}
+									description={prose.description}
+									tags={prose.tags}
+									size="small"
+								/>
+							</div>
+						);
+					})}
+				</div>
+			</div>
 		</div>
 	);
 };

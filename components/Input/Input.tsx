@@ -3,7 +3,7 @@ import { InputProps } from "./Input.types";
 import styles from "./Input.module.css";
 import cn from "classnames";
 
-const Input = React.forwardRef(
+export const Input = React.forwardRef(
 	(
 		{ className, label, labelClass, ...args }: InputProps,
 		ref: ForwardedRef<HTMLInputElement>
@@ -18,5 +18,3 @@ const Input = React.forwardRef(
 		);
 	}
 );
-
-export default Input;
