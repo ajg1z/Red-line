@@ -7,8 +7,11 @@
 
 .text {
 	grid-column: 1/-1;
+
+	/* stylelint-disable-next-line value-no-vendor-prefix */
 	display: -webkit-box;
 	overflow: hidden;
+
 	text-overflow: ellipsis;
 	-webkit-line-clamp: 2;
 	-webkit-box-orient: vertical;

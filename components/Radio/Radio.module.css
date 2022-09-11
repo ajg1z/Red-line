@@ -1,0 +1,46 @@
+.container {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.radio {
+	display: none;
+}
+
+.reverse {
+	flex-direction: row-reverse;
+}
+
+.label {
+	cursor: pointer;
+	position: relative;
+	font-weight: 500;
+}
+
+.label::before {
+	content: "";
+	border: 1px solid rgb(27, 25, 25);
+	display: inline-block;
+	margin: 0 5px;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	position: relative;
+	top: 1px;
+}
+
+.label::after {
+	content: "";
+	position: absolute;
+	width: 9px;
+	height: 9px;
+	left: 6.6px;
+	top: 4px;
+	border-radius: 50%;
+	transition: all 0.3s;
+}
+
+.radio:checked + .label::after {
+	background-color: black;
+}

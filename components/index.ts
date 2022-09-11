@@ -7,3 +7,6 @@ export * from "./Paragraph/Paragraph";
 export * from "./Search/Search";
 export * from "./Title/Title";
 export * from "./Link/Link";
+export * from "./Radio/Radio";
+export * from "./PersonCard/PersonCard";
+export * from "./Pagination/Pagination";

@@ -9,15 +9,20 @@ export const Search: React.FC<SearchProps> = ({
 	className,
 	placeholder,
 	classInput,
+	onChangeInput,
+	value,
+	onClick,
 	...args
 }) => {
 	return (
 		<div className={cn(styles.search, className)} {...args}>
 			<Input
+				onChange={(e) => onChangeInput(e.target.value)}
 				placeholder={placeholder}
+				value={value}
 				className={cn(styles.input, classInput)}
 			/>
-			<SearchIcon className={styles.searchIcon} />
+			<SearchIcon onClick={onClick} className={styles.searchIcon} />
 		</div>
 	);
 };

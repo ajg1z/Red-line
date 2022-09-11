@@ -1,125 +1,155 @@
 {
-	"home": {
-		"statistics": {
-			"users": 707,
-			"works": 89,
-			"readed": 8023,
-			"comments": 209
+	"books": [
+		{
+			"title": "Виват, королева! Карл III, виват!",
+			"img": "",
+			"genres": ["lyrics"],
+			"id": 1,
+			"weekRating": 10,
+			"monthRating": 320,
+			"allTimeRating": 900,
+			"adultContent": true,
+			"formWork": "poem"
 		},
-		"topProses": [
-			{
-				"title": "Они среди нас",
-				"img": "",
-				"genres": ["mystic", "prose", "fiction"],
-				"description": "Артём Ботов — адвокат, занимающийся «иными» делами, находящийся на службе в организации под названием «Приход Посвященных». Его глаза видят немного больше, чем могут видеть глаза обычных людей. Артём видит «Их». Он точно знает, что они среди нас. Это сущности и духи из потустороннего загадочного мира, с которыми нужно постоянно бороться. Помогая другим, он позабыл о своей жизни. Таких, как он, называют «контактирующими». Его ли это выбор? Справится ли Артём с возложенными на него обязанностями?",
-				"tags": ["онисрединас", "янайер"],
-				"author": "Nina",
-				"id": 1,
-				"formWork": "Story"
-			},
-			{
-				"title": "Расплата",
-				"img": "",
-				"genres": ["adventure", "fantasy"],
-				"description": "Средневековое фэнтези. Итис и Аэдона, утомившиеся дорогой, останавливаются переночевать в небольшом захолустном городке. Герои сильно нервничают, постепенно открывается что они не совсем те, за кого себя выдают. Преследователи гоняться за ними по пятам. Попав в западню герои пытаются выжить, а затем сталкиваются с куда более опасным и жестоким противником.",
-				"tags": ["Магия", "средневековье", "сражения", "политика"],
-				"author": "Alex",
-				"id": 2,
-				"formWork": "Story"
-			},
-			{
-				"title": "Друзья на Севере.",
-				"img": "",
-				"genres": ["adventure", "fantasy", "journalism"],
-				"description": "Группа разведчиков направляется на север к Дальним Границам — суровым и диким местам, населённым не менее суровыми и дикими людьми. Тревожные слухи приходят из этих мест. Люди покидают свои дома, рассказывают о жестоких налётах. Разведчики попытаются узнать о том, что происходит на самом деле",
-				"tags": ["Средневековье", "сражения", "северяне", "поход"],
-				"author": "Joi",
-				"id": 3,
-				"formWork": "Story"
-			}
-		],
-		"topPoem": [
-			{
-				"title": "Виват, королева! Карл III, виват!",
-				"img": "",
-				"genres": ["lyrics"],
-				"id": 1,
-				"formWork": "Poem"
-			},
-			{
-				"title": "Душа взорвалась метеорами",
-				"img": "",
-				"genres": ["other"],
-				"id": 2,
-				"formWork": "Poem"
-			},
-			{
-				"title": "Легенды осени",
-				"img": "",
-				"genres": ["lyrics", "poetry"],
-				"id": 3,
-				"formWork": "Poem"
-			}
-		],
-		"notRated": {
-			"proses": [
-				{
-					"title": "Verte",
-					"img": "",
-					"genres": ["postmodernism", "prose", "horror", "black-humor"],
-					"description": "Молодой человек, работающий в копировальном центре, натыкается на странного вида заказчика.",
-					"tags": ["абсент", "карточки", "секта", "сон"],
-					"author": "Tio",
-					"id": 1,
-					"formWork": "Story"
-				},
-				{
-					"title": "Люрей 5",
-					"img": "",
-					"genres": ["mystic"],
-					"description": "Девушка общается с ребёнком, который уже мёртв, но пока этого не осознаёт. Его сознание нужно держать в спокойствии, чтобы оно не стало вечно мечущимся беспокойным духом. Девушка знает, что после смерти нужно быть спокойным, но то что нарушает её спокойствие после смерти, до сих пор её преследует.",
-					"tags": ["смерть", "ужасы", "хоррор", "триллер", "духи", "призраки"],
-					"author": "Kia",
-					"id": 2,
-					"formWork": "Story"
-				},
-				{
-					"title": "21 день я ем малиновые пирожные",
-					"img": "",
-					"genres": ["love-story", "event", "psychology"],
-					"description": "Юля неприятно расстаётся со своим парнем, а через несколько часов получает посылку от незнакомца с малиновыми пирожными и предложением начать переписку...",
-					"tags": ["пирожные", "записки", "аноним", "роман"],
-					"author": "Lialo",
-					"id": 3,
-					"formWork": "novel"
-				}
-			],
-			"poems": [
-				{
-					"title": "На прощание",
-					"img": "",
-					"genres": ["poetry"],
-					"id": 1,
-					"formWork": "Poem"
-				},
-				{
-					"title": "Я возьму два билета",
-					"img": "",
-					"genres": ["lyrics", "poetry"],
-					"id": 2,
-					"formWork": "Poem"
-				},
-				{
-					"title": "Never give up",
-					"img": "",
-					"genres": ["lyrics", "realism"],
-					"id": 3,
-					"formWork": "Poem"
-				}
-			]
+		{
+			"title": "Душа взорвалась метеорами",
+			"img": "",
+			"weekRating": 1,
+			"monthRating": 1,
+			"allTimeRating": 1,
+			"genres": ["other"],
+			"id": 2,
+			"formWork": "poem"
+		},
+		{
+			"title": "Легенды осени",
+			"img": "",
+			"weekRating": 0,
+			"monthRating": 0,
+			"allTimeRating": 0,
+			"genres": ["lyrics", "poetry"],
+			"id": 3,
+			"formWork": "poem"
+		},
+		{
+			"title": "Они среди нас",
+			"img": "",
+			"weekRating": 90,
+			"monthRating": 560,
+			"allTimeRating": 1200,
+			"genres": ["mystic", "prose", "fiction"],
+			"description": "Артём Ботов — адвокат, занимающийся «иными» делами, находящийся на службе в организации под названием «Приход Посвященных». Его глаза видят немного больше, чем могут видеть глаза обычных людей. Артём видит «Их». Он точно знает, что они среди нас. Это сущности и духи из потустороннего загадочного мира, с которыми нужно постоянно бороться. Помогая другим, он позабыл о своей жизни. Таких, как он, называют «контактирующими». Его ли это выбор? Справится ли Артём с возложенными на него обязанностями?",
+			"tags": ["онисрединас", "янайер"],
+			"author": "Nina",
+			"id": 4,
+			"adultContent": true,
+			"formWork": "story"
+		},
+		{
+			"title": "Расплата",
+			"img": "",
+			"weekRating": 20,
+			"monthRating": 920,
+			"allTimeRating": 2900,
+			"genres": ["adventure", "fantasy"],
+			"description": "Средневековое фэнтези. Итис и Аэдона, утомившиеся дорогой, останавливаются переночевать в небольшом захолустном городке. Герои сильно нервничают, постепенно открывается что они не совсем те, за кого себя выдают. Преследователи гоняться за ними по пятам. Попав в западню герои пытаются выжить, а затем сталкиваются с куда более опасным и жестоким противником.",
+			"tags": ["Магия", "средневековье", "сражения", "политика"],
+			"author": "Alex",
+			"id": 5,
+			"formWork": "story"
+		},
+		{
+			"title": "Друзья на Севере.",
+			"img": "",
+			"weekRating": 0,
+			"monthRating": 0,
+			"allTimeRating": 0,
+			"genres": ["adventure", "fantasy", "journalism"],
+			"description": "Группа разведчиков направляется на север к Дальним Границам — суровым и диким местам, населённым не менее суровыми и дикими людьми. Тревожные слухи приходят из этих мест. Люди покидают свои дома, рассказывают о жестоких налётах. Разведчики попытаются узнать о том, что происходит на самом деле",
+			"tags": ["Средневековье", "сражения", "северяне", "поход"],
+			"author": "Joi",
+			"id": 6,
+			"adultContent": true,
+			"formWork": "story"
+		},
+		{
+			"title": "Verte",
+			"img": "",
+			"weekRating": 50,
+			"monthRating": 90,
+			"allTimeRating": 100,
+			"genres": ["postmodernism", "prose", "horror", "black-humor"],
+			"description": "Молодой человек, работающий в копировальном центре, натыкается на странного вида заказчика.",
+			"tags": ["абсент", "карточки", "секта", "сон"],
+			"author": "Tio",
+			"id": 7,
+			"formWork": "story"
+		},
+		{
+			"title": "Люрей 5",
+			"img": "",
+			"weekRating": 100,
+			"monthRating": 9020,
+			"allTimeRating": 60920,
+			"genres": ["mystic"],
+			"description": "Девушка общается с ребёнком, который уже мёртв, но пока этого не осознаёт. Его сознание нужно держать в спокойствии, чтобы оно не стало вечно мечущимся беспокойным духом. Девушка знает, что после смерти нужно быть спокойным, но то что нарушает её спокойствие после смерти, до сих пор её преследует.",
+			"tags": ["смерть", "ужасы", "хоррор", "триллер", "духи", "призраки"],
+			"author": "Kia",
+			"id": 8,
+			"formWork": "story"
+		},
+		{
+			"title": "21 день я ем малиновые пирожные",
+			"img": "",
+			"weekRating": 0,
+			"monthRating": 0,
+			"allTimeRating": 0,
+			"genres": ["love-story", "event", "psychology"],
+			"description": "Юля неприятно расстаётся со своим парнем, а через несколько часов получает посылку от незнакомца с малиновыми пирожными и предложением начать переписку...",
+			"tags": ["пирожные", "записки", "аноним", "роман"],
+			"author": "Lialo",
+			"id": 9,
+			"adultContent": true,
+			"formWork": "novel"
+		},
+		{
+			"title": "На прощание",
+			"img": "",
+			"weekRating": 82,
+			"monthRating": 240,
+			"allTimeRating": 400,
+			"genres": ["poetry"],
+			"id": 10,
+			"formWork": "poem"
+		},
+		{
+			"title": "Я возьму два билета",
+			"img": "",
+			"weekRating": 2,
+			"monthRating": 30,
+			"allTimeRating": 30,
+			"genres": ["lyrics", "poetry"],
+			"id": 11,
+			"formWork": "poem"
+		},
+		{
+			"title": "Never give up",
+			"img": "",
+			"weekRating": 1890,
+			"monthRating": 3000,
+			"allTimeRating": 45000,
+			"genres": ["lyrics", "realism"],
+			"id": 12,
+			"formWork": "poem"
 		}
+	],
+	"statistics": {
+		"users": 707,
+		"works": 89,
+		"readed": 8023,
+		"comments": 209
 	},
-	"last-comments": [
+	"comments": [
 		{
 			"id": 1,
 			"author": { "name": "Lialo", "id": 1 },
@@ -127,7 +157,8 @@
 			"product": {
 				"id": 1,
 				"name": "Фридрих Вильгельм III и железный крест"
-			}
+			},
+			"createdAt": "2022-09-11"
 		},
 		{
 			"id": 2,
@@ -136,7 +167,8 @@
 			"product": {
 				"id": 2,
 				"name": "Что мне дала служба в Советской Армии"
-			}
+			},
+			"createdAt": "2022-09-10"
 		},
 		{
 			"id": 3,
@@ -145,7 +177,8 @@
 			"product": {
 				"id": 2,
 				"name": "Три имени женщины."
-			}
+			},
+			"createdAt": "2021-11-01"
 		}
 	],
 	"promoted-books": [
@@ -180,5 +213,241 @@
 			"formWork": "Story"
 		}
 	],
-	"prose": {}
+	"users": [
+		{
+			"id": 1,
+			"name": "DarkNight",
+			"avatar": "",
+			"rating": 100,
+			"info": {
+				"city": "Москва",
+				"description": "",
+				"preferGenres": "",
+				"favoriteBooks": "Много",
+				"fullName": "Расит Хамон",
+				"age": 34,
+				"beginWrite": 2020
+			},
+			"createdAt": "2020-01-01",
+			"friends": [
+				{
+					"name": "Io",
+					"id": 3
+				},
+				{
+					"name": "Lialo",
+					"id": 4
+				}
+			]
+		},
+		{
+			"id": 2,
+			"name": "Gui",
+			"avatar": "",
+			"rating": 230,
+			"info": {
+				"city": "Уфа",
+				"description": "Нечего описывать",
+				"preferGenres": "Фантастика и Драма",
+				"favoriteBooks": "Все русские униги 17 века",
+				"fullName": "",
+				"age": 19,
+				"beginWrite": 2021
+			},
+			"friends": [
+				{
+					"name": "Io",
+					"id": 3
+				},
+				{
+					"name": "Lialo",
+					"id": 4
+				},
+				{
+					"name": "DarkNight",
+					"id": 1
+				}
+			],
+			"createdAt": "2018-02-01"
+		},
+		{
+			"id": 3,
+			"name": "Io",
+			"avatar": "",
+			"rating": 1100,
+			"info": {
+				"city": "Москва",
+				"description": "",
+				"preferGenres": "",
+				"favoriteBooks": "",
+				"fullName": "",
+				"age": 55,
+				"beginWrite": 2012
+			},
+			"friends": [],
+			"createdAt": "2009-11-01"
+		},
+		{
+			"id": 4,
+			"name": "Lialo",
+			"avatar": "",
+			"rating": 4500,
+			"info": {
+				"city": "Москва",
+				"description": "Люблю писать.",
+				"preferGenres": "Романтика",
+				"favoriteBooks": "Классическая литература",
+				"fullName": "Анна Лобская",
+				"age": 24,
+				"beginWrite": 2013
+			},
+			"friends": [
+				{
+					"name": "Io",
+					"id": 3
+				},
+				{
+					"name": "Gui",
+					"id": 2
+				},
+				{
+					"name": "Porom",
+					"id": 5
+				}
+			],
+			"createdAt": "2019-12-22"
+		},
+		{
+			"id": 5,
+			"name": "Porom",
+			"avatar": "",
+			"rating": 5900,
+			"info": {
+				"city": "Питер",
+				"description": "",
+				"preferGenres": "",
+				"favoriteBooks": "Фентези, Фантастика, Хоррор",
+				"fullName": "Дима Алексеевич",
+				"age": 29,
+				"beginWrite": 2001
+			},
+			"friends": [
+				{
+					"name": "Lialo",
+					"id": 4
+				},
+				{
+					"name": "Io",
+					"id": 3
+				}
+			],
+			"createdAt": "2002-06-31"
+		},
+		{
+			"id": 6,
+			"name": "Fugare",
+			"avatar": "",
+			"rating": 11000,
+			"info": {
+				"city": "Краснодар",
+				"description": "Я думал, она нормальная, а она журналистка",
+				"preferGenres": "",
+				"favoriteBooks": "Тропик Рака",
+				"fullName": "Расит Хамон",
+				"age": 22,
+				"beginWrite": 2018
+			},
+			"friends": [
+				{
+					"name": "Io",
+					"id": 3
+				},
+				{
+					"name": "Porom",
+					"id": 5
+				},
+				{
+					"name": "Gui",
+					"id": 2
+				},
+				{
+					"name": "DarkNight",
+					"id": 1
+				},
+				{
+					"id": 4,
+					"name": "Lialo"
+				}
+			],
+			"createdAt": "2001-01-01"
+		},
+		{
+			"id": 7,
+			"name": "LOLO",
+			"avatar": "",
+			"rating": 2900,
+			"info": {
+				"city": "Москва",
+				"description": "",
+				"preferGenres": "",
+				"favoriteBooks": "",
+				"fullName": "",
+				"age": 44,
+				"beginWrite": 1998
+			},
+			"friends": [],
+			"createdAt": "2015-12-01"
+		},
+		{
+			"id": 8,
+			"name": "POPO",
+			"avatar": "",
+			"rating": 6009,
+			"info": {
+				"city": "Москва",
+				"description": "",
+				"preferGenres": "",
+				"favoriteBooks": "",
+				"fullName": "",
+				"age": 89,
+				"beginWrite": 1989
+			},
+			"friends": [],
+			"createdAt": "2006-01-01"
+		},
+		{
+			"id": 9,
+			"name": "Asya",
+			"avatar": "",
+			"rating": 11009,
+			"info": {
+				"city": "Москва",
+				"description": "",
+				"preferGenres": "",
+				"favoriteBooks": "",
+				"fullName": "",
+				"age": 21,
+				"beginWrite": 2015
+			},
+			"friends": [],
+			"createdAt": "2017-01-01"
+		},
+		{
+			"id": 10,
+			"name": "Master",
+			"avatar": "",
+			"rating": 59089,
+			"info": {
+				"city": "Москва",
+				"description": "",
+				"preferGenres": "",
+				"favoriteBooks": "",
+				"fullName": "",
+				"age": 51,
+				"beginWrite": 2001
+			},
+			"friends": [],
+			"createdAt": "2012-01-01"
+		}
+	]
 }

@@ -1,24 +1,48 @@
+/* eslint-disable no-debugger */
 import React, { Fragment } from "react";
 import Top from "./components/Top/Top";
 import { TopOptions } from "./constans";
 import styles from "./Home.module.css";
 import { HomeProps } from "./Home.types";
-import {
-	Bolder,
-	Button,
-	Divider,
-	Paragraph,
-	Title,
-	BookCard,
-} from "../../components";
+import { Bolder, Divider, Paragraph, Title, BookCard } from "../../components";
 import cn from "classnames";
+import { SortPeriod } from "./components/Top/Top.types";
+import { FormWorks } from "../../global-constans";
+import {
+	getSortedPoemsByField,
+	getSortedProsesByField,
+} from "./helpers/books-sort-func";
+import { motion } from "framer-motion";
 
-const HomePage: React.FC<HomeProps> = ({
-	statistics,
-	topProses,
-	topPoem,
-	notRated,
-}) => {
+const HomePage: React.FC<HomeProps> = ({ statistics, books }) => {
+	const [proses, setProses] = React.useState(
+		getSortedProsesByField(books, SortPeriod.Week)
+	);
+	const [poems, setPoems] = React.useState(
+		getSortedPoemsByField(books, SortPeriod.Week)
+	);
+
+	const [notRatedPoems, setNotRatedPoems] = React.useState(() =>
+		books
+			.filter(
+				(book) => book.formWork === FormWorks.Poem && book.weekRating === 0
+			)
+			.slice(0, 5)
+	);
+	const [notRatedProses, setNotRatedProses] = React.useState(() =>
+		books
+			.filter(
+				(book) => book.formWork !== FormWorks.Poem && book.weekRating === 0
+			)
+			.slice(0, 5)
+	);
+
+	const handleSort = (typeSort: SortPeriod, typeProducts: FormWorks) => {
+		if (typeProducts === FormWorks.Poem) {
+			setPoems(getSortedPoemsByField(books, typeSort));
+		} else setProses(getSortedProsesByField(books, typeSort));
+	};
+
 	return (
 		<div className={styles.home}>
 			<Title className={styles.mainTitle} tag="h1">
@@ -50,43 +74,57 @@ const HomePage: React.FC<HomeProps> = ({
 				ним оставлено <Bolder> {statistics.comments}</Bolder> комментариев.
 			</Paragraph>
 			<Divider />
-			<Top title="Лучшая проза" sortTypes={TopOptions} sortLabel="за" />
-			{topProses.map((prose, index) => {
-				return (
-					<div key={prose.id} className={styles.tops}>
-						{index !== 0 && <Divider margin={15} className={styles.divider} />}
-						<BookCard
-							formWork={prose.formWork}
-							genres={prose.genres}
-							id={prose.id}
-							title={prose.title}
-							img={prose.img}
-							description={prose.description}
-							tags={prose.tags}
-							size="small"
-						/>
-					</div>
-				);
-			})}
+			<Top
+				sortAction={(type) => handleSort(type, FormWorks.Story)}
+				title="Лучшая проза"
+				sortTypes={TopOptions}
+				sortLabel="за"
+			/>
+			<motion.div layout className={styles.tops}>
+				{proses.map((prose, index) => {
+					return (
+						<Fragment key={prose.id}>
+							{index !== 0 && <Divider margin={15} />}
+							<BookCard
+								formWork={prose.formWork}
+								genres={prose.genres}
+								id={prose.id}
+								title={prose.title}
+								img={prose.img}
+								description={prose.description}
+								tags={prose.tags}
+								size="small"
+							/>
+						</Fragment>
+					);
+				})}
+			</motion.div>
 
-			<Top title="Лучшие стихи" sortTypes={TopOptions} sortLabel={"за"} />
-			{topPoem.map((poem, index) => {
-				return (
-					<div key={poem.id} className={styles.tops}>
-						{index !== 0 && <Divider margin={15} className={styles.divider} />}
-						<BookCard
-							formWork={poem.formWork}
-							genres={poem.genres}
-							id={poem.id}
-							title={poem.title}
-							img={poem.img}
-							description={poem.description}
-							tags={poem.tags}
-							size="small"
-						/>
-					</div>
-				);
-			})}
+			<Top
+				sortAction={(type) => handleSort(type, FormWorks.Poem)}
+				title="Лучшие стихи"
+				sortTypes={TopOptions}
+				sortLabel={"за"}
+			/>
+			<motion.div layout className={styles.tops}>
+				{poems.map((poem, index) => {
+					return (
+						<Fragment key={poem.id}>
+							{index !== 0 && <Divider margin={15} />}
+							<BookCard
+								formWork={poem.formWork}
+								genres={poem.genres}
+								id={poem.id}
+								title={poem.title}
+								img={poem.img}
+								description={poem.description}
+								tags={poem.tags}
+								size="small"
+							/>
+						</Fragment>
+					);
+				})}
+			</motion.div>
 
 			<Top
 				title="Без оценок"
@@ -94,12 +132,10 @@ const HomePage: React.FC<HomeProps> = ({
 			/>
 			<div className={styles.notRated}>
 				<div className={styles.poems}>
-					{notRated.poems.map((poem, index) => {
+					{notRatedPoems.map((poem, index) => {
 						return (
 							<div key={poem.id}>
-								{index !== 0 && (
-									<Divider margin={15} className={styles.divider} />
-								)}
+								{index !== 0 && <Divider margin={15} />}
 								<BookCard
 									formWork={poem.formWork}
 									genres={poem.genres}
@@ -119,12 +155,10 @@ const HomePage: React.FC<HomeProps> = ({
 					className={cn(styles.divider, styles.topsDivider)}
 				/>
 				<div className={styles.proses}>
-					{notRated.proses.map((prose, index) => {
+					{notRatedProses.map((prose, index) => {
 						return (
 							<div key={prose.id}>
-								{index !== 0 && (
-									<Divider margin={15} className={styles.divider} />
-								)}
+								{index !== 0 && <Divider margin={15} />}
 								<BookCard
 									formWork={prose.formWork}
 									genres={prose.genres}

@@ -2,6 +2,7 @@
 	margin-bottom: 20px;
 
 	padding-bottom: 5px;
+
 	border-bottom: 1px solid var(--black-white);
 }
 
@@ -23,6 +24,10 @@
 
 .sortType {
 	cursor: pointer;
+}
+
+.activeSortType {
+	color: blue;
 }
 
 .sortType button {

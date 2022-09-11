@@ -24,7 +24,7 @@ export const withLayout = <T extends LayoutProps>(Component: React.FC<T>) => {
 	return function withLayoutComponent(props: T) {
 		return (
 			<AppContextProvider
-				lastComments={props.lastComments}
+				lastComments={props.comments}
 				promotedBooks={props.promotedBooks}
 			>
 				<MainLayout>

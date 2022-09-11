@@ -1,4 +1,4 @@
 export * from "./Home.types";
-import C from "./Home";
+import Home from "./Home";
 
-export default C;
+export default Home;

@@ -1,0 +1,84 @@
+.container {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	height: 35px;
+}
+
+.container button {
+	background-color: var(--white-blue);
+	cursor: pointer;
+}
+
+.listPage {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.listPage li {
+	height: 100%;
+}
+
+.bttn {
+	border: none;
+	height: 100%;
+	padding: 0 10px;
+	border-radius: 5px;
+	white-space: nowrap;
+}
+
+.start {
+	margin-right: 15px;
+}
+
+.end {
+	margin-left: 15px;
+}
+
+.pageItem {
+	border: none;
+	height: 100%;
+	padding: 0 10px;
+}
+
+.activePage {
+	background-color: var(--black-blue);
+	color: var(--white);
+}
+
+@media screen and (max-width: 480px) {
+	.container {
+		justify-content: center;
+	}
+
+	.start {
+		margin-right: 10px;
+	}
+
+	.end {
+		margin-left: 10px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.container {
+		flex-direction: column;
+		height: max-content;
+		column-gap: 0;
+		row-gap: 10px;
+	}
+
+	.container button {
+		padding: 8px 10px;
+	}
+
+	.start {
+		margin: 0;
+	}
+
+	.end {
+		margin: 0;
+	}
+}

@@ -1,25 +1,21 @@
 import type { GetStaticProps, NextPage } from "next";
-import { $api } from "../api";
-import { BookChard } from "../interfaces/book.interface";
-import { CommentItem } from "../interfaces/comment.interface";
+import { Api } from "../api";
 import { withLayout } from "../layout/layout";
-import HomePage, { HomeData, HomeProps } from "../page-components/Home/index";
+import Home, { HomePageProps } from "../page-components/Home/index";
 
-const Home: NextPage<HomeProps> = (props) => {
-	return <HomePage {...props} />;
+const HomePage: NextPage<HomePageProps> = (props) => {
+	return <Home books={props.books} statistics={props.statistics} />;
 };
 
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
 	try {
-		const { data } = await $api.get<HomeData>("/home");
-		const { data: lastComments } = await $api.get<CommentItem[]>(
-			"/last-comments"
-		);
-		const { data: promotedBooks } = await $api.get<BookChard[]>(
-			"/promoted-books"
-		);
+		// так как это фейковый api-server, то можно я подгружаю здесь все книги, но на настоящем сервере так не сделал бы
+		const books = await Api.bookService.getBooks();
+		const statistics = await Api.statistics();
+		const { promotedBooks, comments } = await Api.getSidebarData();
+
 		return {
-			props: { ...data, lastComments, promotedBooks },
+			props: { comments, promotedBooks, statistics, books },
 		};
 	} catch (e) {
 		console.log(e);
@@ -29,4 +25,4 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 	}
 };
 
-export default withLayout(Home);
+export default withLayout(HomePage);

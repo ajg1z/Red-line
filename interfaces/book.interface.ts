@@ -9,8 +9,9 @@ export interface BookChard {
 	author: string;
 	id: string;
 	formWork: FormWorksType;
-	ageLimit: number;
+	adultContent?: boolean;
 	weekRating: number;
 	monthRating: number;
 	allTimeRating: number;
+	createdAt: string;
 }

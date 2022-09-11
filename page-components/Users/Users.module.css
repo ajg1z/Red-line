@@ -1,0 +1,21 @@
+.search {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.title {
+	flex: 1 1 auto;
+	white-space: nowrap;
+	margin-bottom: 20px;
+}
+
+.sortOptions {
+	padding: 10px;
+	background-color: var(--white-blue);
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+.users {
+	margin-bottom: 30px;
+}

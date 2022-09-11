@@ -10,9 +10,6 @@
 	background-color: green;
 }
 
-.smallSize {
-}
-
 .title {
 	display: inline-block;
 
@@ -37,6 +34,7 @@
 }
 
 .description {
+	/* stylelint-disable-next-line value-no-vendor-prefix */
 	display: -webkit-box;
 	overflow: hidden;
 

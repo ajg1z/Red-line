@@ -1,7 +1,8 @@
 import React from "react";
-import { TopProps } from "./Top.types";
+import { SortPeriod, TopProps } from "./Top.types";
 import styles from "./Top.module.css";
 import { Paragraph, Title } from "../../../../components";
+import cn from "classnames";
 
 const Top: React.FC<TopProps> = ({
 	title,
@@ -10,6 +11,23 @@ const Top: React.FC<TopProps> = ({
 	sortTypes,
 	sortLabel,
 }) => {
+	const [selected, setSelected] = React.useState(1);
+	const handleSort = (value: number) => {
+		setSelected(value);
+		if (sortAction) {
+			switch (value) {
+				case 1:
+					return sortAction(SortPeriod.Week);
+				case 2:
+					return sortAction(SortPeriod.Month);
+				case 3:
+					return sortAction(SortPeriod.AllTime);
+				default:
+					throw Error();
+			}
+		}
+	};
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.top}>
@@ -23,8 +41,16 @@ const Top: React.FC<TopProps> = ({
 					<ul className={styles.sortTypes}>
 						{sortTypes.map((type) => {
 							return (
-								<li key={type.value} className={styles.sortType}>
-									<button>{type.label}</button>
+								<li
+									key={type.value}
+									className={cn(
+										styles.sortType,
+										selected === type.value && styles.activeSortType
+									)}
+								>
+									<button onClick={() => handleSort(type.value)}>
+										{type.label}
+									</button>
 								</li>
 							);
 						})}

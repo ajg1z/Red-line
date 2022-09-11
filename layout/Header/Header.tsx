@@ -24,7 +24,9 @@ export const Header: React.FC<HeaderProps> = () => {
 	return (
 		<header className={styles.header}>
 			<div className={styles.container}>
-				<h2 className={styles.logo}>RED-Line</h2>
+				<h2 className={styles.logo}>
+					<Link href={"/"}>RED-Line</Link>
+				</h2>
 				<Search
 					placeholder="Поиск"
 					classInput={styles.searchInput}

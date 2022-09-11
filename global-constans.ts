@@ -81,3 +81,14 @@ export const DefaultParams = {
 	domainUrl: process.env.NEXT_PUBLIC_DOMAIN,
 	defaultImage: "",
 };
+
+export enum Keys {
+	ArrowRight = "ArrowRight",
+	ArrowLeft = "ArrowLeft",
+	ArrowUp = "ArrowUp",
+	ArrowDown = "ArrowDown",
+	Space = "Space",
+	Tab = "Tab",
+	Shift = "Shift",
+	Enter = "Enter",
+}
