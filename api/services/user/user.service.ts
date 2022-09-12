@@ -6,4 +6,9 @@ export default {
 		const { data } = await $api.get<Person[]>(`/users${query ?? ""}`);
 		return data;
 	},
+	async getUsersCount() {
+		const { headers } = await $api.get<number>(`/users?_start=0&_end=0`);
+		if (headers["x-total-count"]) return +headers["x-total-count"];
+		return 0;
+	},
 };

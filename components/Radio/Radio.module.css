@@ -1,6 +1,7 @@
 .container {
 	display: flex;
 	gap: 10px;
+
 	align-items: center;
 }
 
@@ -13,32 +14,41 @@
 }
 
 .label {
-	cursor: pointer;
 	position: relative;
+
+	cursor: pointer;
+
 	font-weight: 500;
 }
 
 .label::before {
-	content: "";
-	border: 1px solid rgb(27, 25, 25);
-	display: inline-block;
-	margin: 0 5px;
-	width: 10px;
-	height: 10px;
-	border-radius: 50%;
 	position: relative;
 	top: 1px;
+
+	display: inline-block;
+
+	width: 10px;
+	height: 10px;
+	margin: 0 5px;
+
+	content: "";
+
+	border: 1px solid rgb(27 25 25);
+	border-radius: 50%;
 }
 
 .label::after {
-	content: "";
 	position: absolute;
+	top: 4px;
+	left: 6.6px;
+
 	width: 9px;
 	height: 9px;
-	left: 6.6px;
-	top: 4px;
-	border-radius: 50%;
+
+	content: "";
 	transition: all 0.3s;
+
+	border-radius: 50%;
 }
 
 .radio:checked + .label::after {

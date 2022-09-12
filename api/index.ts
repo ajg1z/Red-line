@@ -5,7 +5,7 @@ import userService from "./services/user/user.service";
 import { Statistics } from "../page-components/Home";
 
 export const $api = axios.create({
-	baseURL: process.env.BACKEND_URL,
+	baseURL: process.env.NEXT_PUBLIC_BACKEND_URL,
 	timeout: 10000,
 });
 

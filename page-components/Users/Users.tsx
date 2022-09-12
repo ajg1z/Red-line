@@ -10,15 +10,13 @@ import {
 	Search,
 	Title,
 } from "../../components";
-import { GetStaticProps, NextPage } from "next";
 import SortItem from "./components/SortItem/SortItem";
-import { QueryParams } from "./components/SortItem/SortItem.types";
 import { Api } from "../../api";
 import { getBeginWtiteYear, getTimeOnSite } from "./helpers/query-handle";
 import { SearchBeginWrite, SearchInSiteOptions, SortOptions } from "./constans";
 import { Person } from "../../interfaces/person.interface";
 
-const Users: React.FC<UsersProps> = ({ users: usersProps }) => {
+const Users: React.FC<UsersProps> = ({ users: usersProps, usersCount }) => {
 	const [limit, setLimit] = React.useState(10);
 	const [page, setPage] = React.useState(1);
 
@@ -47,7 +45,7 @@ const Users: React.FC<UsersProps> = ({ users: usersProps }) => {
 
 	React.useEffect(() => {
 		hanldeSearchUsers();
-	}, [beginWrite, inSite, sort]);
+	}, [beginWrite, inSite, sort, page]);
 
 	return (
 		<div className={cn(styles.container)}>
@@ -93,7 +91,7 @@ const Users: React.FC<UsersProps> = ({ users: usersProps }) => {
 					);
 				})}
 			</div>
-			<Pagination max={10} page={page} setPage={setPage} />
+			<Pagination max={usersCount} page={page} setPage={setPage} />
 		</div>
 	);
 };

@@ -5,5 +5,5 @@ export interface SearchProps
 	classInput?: string;
 	value?: string;
 	onChangeInput: (value: string) => void;
-	onClick: (event: React.MouseEvent) => void;
+	onClick: () => void;
 }

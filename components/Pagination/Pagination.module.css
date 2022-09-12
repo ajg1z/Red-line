@@ -1,19 +1,22 @@
 .container {
 	display: flex;
 	align-items: center;
-	margin-top: 20px;
+
 	height: 35px;
+	margin-top: 20px;
 }
 
 .container button {
-	background-color: var(--white-blue);
 	cursor: pointer;
+
+	background-color: var(--white-blue);
 }
 
 .listPage {
-	height: 100%;
 	display: flex;
 	align-items: center;
+
+	height: 100%;
 	gap: 5px;
 }
 
@@ -22,11 +25,13 @@
 }
 
 .bttn {
-	border: none;
 	height: 100%;
 	padding: 0 10px;
-	border-radius: 5px;
+
 	white-space: nowrap;
+
+	border: none;
+	border-radius: 5px;
 }
 
 .start {
@@ -38,14 +43,20 @@
 }
 
 .pageItem {
-	border: none;
 	height: 100%;
 	padding: 0 10px;
+
+	border: none;
 }
 
 .activePage {
-	background-color: var(--black-blue);
 	color: var(--white);
+	background-color: var(--black-blue);
+}
+
+.bttn:disabled {
+	opacity: 0.8;
+	cursor: not-allowed;
 }
 
 @media screen and (max-width: 480px) {
@@ -65,6 +76,7 @@
 @media screen and (max-width: 320px) {
 	.container {
 		flex-direction: column;
+
 		height: max-content;
 		column-gap: 0;
 		row-gap: 10px;

@@ -1,14 +1,11 @@
-.search {
-	width: 100%;
-	margin-bottom: 10px;
+.title {
+	margin-bottom: 20px;
 }
 
-.title {
-	flex: 1 1 auto;
-
-	margin-bottom: 20px;
-
-	white-space: nowrap;
+.search {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 10px;
 }
 
 .sortOptions {
@@ -19,6 +16,8 @@
 	background-color: var(--white-blue);
 }
 
-.users {
-	margin-bottom: 30px;
+.sortList {
+	display: flex;
+	align-items: center;
+	column-gap: 15px;
 }

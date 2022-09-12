@@ -1,15 +1,16 @@
 .container {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
+
+	margin-bottom: 10px;
 	column-gap: 15px;
 	row-gap: 6px;
-	margin-bottom: 10px;
-	flex-wrap: wrap;
 }
 
 @media screen and (max-width: 480px) {
 	.container {
-		flex-direction: column;
 		align-items: flex-start;
+		flex-direction: column;
 	}
 }

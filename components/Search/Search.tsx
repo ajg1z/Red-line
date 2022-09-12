@@ -4,6 +4,7 @@ import styles from "./Search.module.css";
 import { SearchProps } from "./Search.types";
 import SearchIcon from "./search.svg";
 import cn from "classnames";
+import { Keys } from "../../global-constans";
 
 export const Search: React.FC<SearchProps> = ({
 	className,
@@ -14,9 +15,16 @@ export const Search: React.FC<SearchProps> = ({
 	onClick,
 	...args
 }) => {
+	const handleKeyDown = (key: React.KeyboardEvent) => {
+		if (key.code === Keys.Space || key.code === Keys.Enter) {
+			onClick();
+			key.preventDefault();
+		}
+	};
 	return (
 		<div className={cn(styles.search, className)} {...args}>
 			<Input
+				onKeyDown={handleKeyDown}
 				onChange={(e) => onChangeInput(e.target.value)}
 				placeholder={placeholder}
 				value={value}

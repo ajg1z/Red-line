@@ -11,16 +11,20 @@ export const Pagination: React.FC<PaginationProps> = ({
 	max,
 	...args
 }) => {
+	const pagesCount = React.useMemo(() => {
+		return Math.ceil(max / 10);
+	}, [max]);
 	return (
-		<div className={cn(styles.container, className)}>
+		<div className={cn(styles.container, className)} {...args}>
 			<button
+				disabled={page === 1}
 				onClick={() => setPage(1)}
 				className={cn(styles.bttn, styles.start)}
 			>
 				В начало
 			</button>
 			<ul className={styles.listPage}>
-				{createArray(max)
+				{createArray(pagesCount)
 					.slice(page - 2 < 0 ? 0 : page - 2, page + 2)
 					.map((pageIndex) => {
 						return (
@@ -38,6 +42,7 @@ export const Pagination: React.FC<PaginationProps> = ({
 					})}
 			</ul>
 			<button
+				disabled={pagesCount === page}
 				onClick={() => setPage(page + 1)}
 				className={cn(styles.bttn, styles.end)}
 			>

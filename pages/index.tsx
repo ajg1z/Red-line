@@ -12,6 +12,7 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
 		// так как это фейковый api-server, то можно я подгружаю здесь все книги, но на настоящем сервере так не сделал бы
 		const books = await Api.bookService.getBooks();
 		const statistics = await Api.statistics();
+
 		const { promotedBooks, comments } = await Api.getSidebarData();
 
 		return {
