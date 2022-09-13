@@ -25,11 +25,10 @@ export const getStaticProps: GetStaticProps<UsersPageProps> = async () => {
 		};
 	} catch (e) {
 		return {
-			notFound: true,
-			// redirect: {
-			// 	statusCode: 301,
-			// 	destination: `/500`,
-			// },
+			redirect: {
+				statusCode: 301,
+				destination: `/500`,
+			},
 		};
 	}
 };

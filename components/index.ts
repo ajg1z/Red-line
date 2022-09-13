@@ -10,3 +10,4 @@ export * from "./Link/Link";
 export * from "./Radio/Radio";
 export * from "./PersonCard/PersonCard";
 export * from "./Pagination/Pagination";
+export * from "./SortLine/SortLine";

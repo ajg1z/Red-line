@@ -7,11 +7,12 @@ import UserIcon from "./icons/user.svg";
 import MenuIcon from "./icons/menu.svg";
 import cn from "classnames";
 import { Search } from "../../components";
+import { Pages } from "../../global-constans";
 
 export const MENU_ITEMS = [
-	{ label: "Люди", link: `/users` },
-	{ label: "Проза", link: `/prose` },
-	{ label: "Стихи", link: `/poems` },
+	{ label: "Люди", link: Pages.Users },
+	{ label: "Проза", link: Pages.Prose },
+	{ label: "Стихи", link: Pages.Poem },
 ];
 
 export const Header: React.FC<HeaderProps> = () => {

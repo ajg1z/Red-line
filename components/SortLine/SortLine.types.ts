@@ -1,10 +1,11 @@
-import { BaseOptions } from "./../../../../helpers/common-types";
+import { BaseOptions } from "../../helpers/common-types";
+
 export interface SortItemProps {
 	label: string;
-	options: BaseOptions<string, string | null>[];
+	options: BaseOptions<string, any>[];
 	value: string | null;
 	name: string;
-	setValue: React.Dispatch<React.SetStateAction<string | null>>;
+	setValue: (params: any) => void;
 }
 
 export interface QueryParams {

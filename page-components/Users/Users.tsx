@@ -1,6 +1,11 @@
 import React from "react";
 import styles from "./Users.module.css";
-import { UsersProps } from "./Users.types";
+import {
+	BeginWriteEnum,
+	InSiteEnum,
+	SortUsersEnum,
+	UsersProps,
+} from "./Users.types";
 import cn from "classnames";
 import {
 	Divider,
@@ -9,8 +14,8 @@ import {
 	PersonCard,
 	Search,
 	Title,
+	SortLine,
 } from "../../components";
-import SortItem from "./components/SortItem/SortItem";
 import { Api } from "../../api";
 import { getBeginWtiteYear, getTimeOnSite } from "./helpers/query-handle";
 import { SearchBeginWrite, SearchInSiteOptions, SortOptions } from "./constans";
@@ -20,10 +25,12 @@ const Users: React.FC<UsersProps> = ({ users: usersProps, usersCount }) => {
 	const [limit, setLimit] = React.useState(10);
 	const [page, setPage] = React.useState(1);
 
-	const [inSite, setInSite] = React.useState<string | null>(null);
-	const [beginWrite, setBeginWrite] = React.useState<string | null>(null);
+	const [inSite, setInSite] = React.useState<InSiteEnum>(InSiteEnum.Null);
+	const [beginWrite, setBeginWrite] = React.useState<BeginWriteEnum>(
+		BeginWriteEnum.Null
+	);
 	const [search, setSearch] = React.useState("");
-	const [sort, setSort] = React.useState<string | null>("rating");
+	const [sort, setSort] = React.useState<SortUsersEnum>(SortUsersEnum.Rating);
 
 	const [users, setUsers] = React.useState<Person[]>(usersProps);
 
@@ -59,21 +66,21 @@ const Users: React.FC<UsersProps> = ({ users: usersProps, usersCount }) => {
 					placeholder="Поиск по словам"
 					className={styles.search}
 				/>
-				<SortItem
+				<SortLine
 					name="sort"
 					setValue={setSort}
 					value={sort}
 					label="Сортировка:"
 					options={SortOptions}
 				/>
-				<SortItem
+				<SortLine
 					name="beginWrite"
 					setValue={setBeginWrite}
 					value={beginWrite}
 					label="С какого года пишу:"
 					options={SearchBeginWrite}
 				/>
-				<SortItem
+				<SortLine
 					name="inSite"
 					setValue={setInSite}
 					value={inSite}

@@ -16,8 +16,20 @@
 	background-color: var(--white-blue);
 }
 
-.sortList {
+.categoryList {
 	display: flex;
 	align-items: center;
 	column-gap: 15px;
+	row-gap: 6px;
+	flex-wrap: wrap;
+}
+
+.selectedCategory {
+	color: blue;
+}
+
+.categoryItem button {
+	background-color: transparent;
+	cursor: pointer;
+	border: none;
 }

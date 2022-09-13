@@ -11,4 +11,12 @@ export interface ProductsPageProps extends SidebarData {
 	books: BookChard[];
 }
 
-export type SortProductType = "new" | "best";
+export enum SortProductEnum {
+	New = "new",
+	Best = "best",
+}
+
+export enum СompletenessProductEnum {
+	Completed = "completed",
+	InComplete = "inComplete",
+}
