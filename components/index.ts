@@ -11,3 +11,4 @@ export * from "./Radio/Radio";
 export * from "./PersonCard/PersonCard";
 export * from "./Pagination/Pagination";
 export * from "./SortLine/SortLine";
+export * from "./Checkbox/Checkbox";

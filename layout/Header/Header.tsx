@@ -11,8 +11,7 @@ import { Pages } from "../../global-constans";
 
 export const MENU_ITEMS = [
 	{ label: "Люди", link: Pages.Users },
-	{ label: "Проза", link: Pages.Prose },
-	{ label: "Стихи", link: Pages.Poem },
+	{ label: "Произведения", link: Pages.Books },
 ];
 
 export const Header: React.FC<HeaderProps> = () => {

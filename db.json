@@ -9,7 +9,22 @@
 			"monthRating": 320,
 			"allTimeRating": 900,
 			"adultContent": true,
-			"formWork": "poem"
+			"formWork": "poem",
+			"createdAt": "2002-06-31",
+			"isComplete": true
+		},
+		{
+			"title": "Виват, TEST ",
+			"img": "",
+			"genres": ["lyrics"],
+			"id": -1,
+			"weekRating": 11,
+			"monthRating": 320,
+			"allTimeRating": 900,
+			"adultContent": true,
+			"formWork": "poetry-collection",
+			"createdAt": "1970-01-01",
+			"isComplete": true
 		},
 		{
 			"title": "Душа взорвалась метеорами",
@@ -19,7 +34,9 @@
 			"allTimeRating": 1,
 			"genres": ["other"],
 			"id": 2,
-			"formWork": "poem"
+			"formWork": "poem",
+			"createdAt": "2010-02-01",
+			"isComplete": true
 		},
 		{
 			"title": "Легенды осени",
@@ -29,7 +46,9 @@
 			"allTimeRating": 0,
 			"genres": ["lyrics", "poetry"],
 			"id": 3,
-			"formWork": "poem"
+			"formWork": "poem",
+			"createdAt": "2015-12-01",
+			"isComplete": false
 		},
 		{
 			"title": "Они среди нас",
@@ -43,7 +62,9 @@
 			"author": "Nina",
 			"id": 4,
 			"adultContent": true,
-			"formWork": "story"
+			"formWork": "story",
+			"createdAt": "2017-02-01",
+			"isComplete": false
 		},
 		{
 			"title": "Расплата",
@@ -56,7 +77,9 @@
 			"tags": ["Магия", "средневековье", "сражения", "политика"],
 			"author": "Alex",
 			"id": 5,
-			"formWork": "story"
+			"formWork": "story",
+			"createdAt": "2018-02-01",
+			"isComplete": false
 		},
 		{
 			"title": "Друзья на Севере.",
@@ -70,7 +93,9 @@
 			"author": "Joi",
 			"id": 6,
 			"adultContent": true,
-			"formWork": "story"
+			"formWork": "story",
+			"createdAt": "2019-01-01",
+			"isComplete": true
 		},
 		{
 			"title": "Verte",
@@ -83,7 +108,9 @@
 			"tags": ["абсент", "карточки", "секта", "сон"],
 			"author": "Tio",
 			"id": 7,
-			"formWork": "story"
+			"formWork": "story",
+			"createdAt": "2020-02-01",
+			"isComplete": true
 		},
 		{
 			"title": "Люрей 5",
@@ -96,7 +123,9 @@
 			"tags": ["смерть", "ужасы", "хоррор", "триллер", "духи", "призраки"],
 			"author": "Kia",
 			"id": 8,
-			"formWork": "story"
+			"formWork": "story",
+			"createdAt": "2021-01-01",
+			"isComplete": false
 		},
 		{
 			"title": "21 день я ем малиновые пирожные",
@@ -110,7 +139,9 @@
 			"author": "Lialo",
 			"id": 9,
 			"adultContent": true,
-			"formWork": "novel"
+			"formWork": "novel",
+			"createdAt": "2021-11-01",
+			"isComplete": true
 		},
 		{
 			"title": "На прощание",
@@ -120,7 +151,9 @@
 			"allTimeRating": 400,
 			"genres": ["poetry"],
 			"id": 10,
-			"formWork": "poem"
+			"formWork": "poem",
+			"createdAt": "2022-02-01",
+			"isComplete": true
 		},
 		{
 			"title": "Я возьму два билета",
@@ -130,7 +163,9 @@
 			"allTimeRating": 30,
 			"genres": ["lyrics", "poetry"],
 			"id": 11,
-			"formWork": "poem"
+			"formWork": "poem",
+			"createdAt": "2022-07-01",
+			"isComplete": false
 		},
 		{
 			"title": "Never give up",
@@ -140,7 +175,9 @@
 			"allTimeRating": 45000,
 			"genres": ["lyrics", "realism"],
 			"id": 12,
-			"formWork": "poem"
+			"formWork": "poem",
+			"createdAt": "2022-11-01",
+			"isComplete": true
 		}
 	],
 	"statistics": {

@@ -1,6 +1,6 @@
 import { Category, FormWorks } from "./../../global-constans";
 import { BaseOptions } from "../../helpers/common-types";
-import { SortProductEnum, СompletenessProductEnum } from "./Products.types";
+import { SortProductEnum } from "./Products.types";
 
 export const SortOptions: BaseOptions<string, SortProductEnum>[] = [
 	{ label: "лучшие", value: SortProductEnum.Best },
@@ -8,7 +8,6 @@ export const SortOptions: BaseOptions<string, SortProductEnum>[] = [
 ];
 
 export const CategoryOptions: BaseOptions<string, Category>[] = [
-	{ label: "Все категории", value: Category.AllCategory },
 	{ label: "Лирика", value: Category.Lyrics },
 	{ label: "Поэзия", value: Category.Poetry },
 	{ label: "Абсурд", value: Category.Absurd },
@@ -43,7 +42,7 @@ export const CategoryOptions: BaseOptions<string, Category>[] = [
 	{ label: "Событие", value: Category.Event },
 	{ label: "Стимпанк", value: Category.Steampunk },
 	{ label: "Сюрреализм", value: Category.Surrealism },
-	{ label: "Фантастика", value: Category.Fantasy },
+	{ label: "Фантастика", value: Category.Fiction },
 	{ label: "Философия", value: Category.Philosophy },
 	{ label: "Фентези", value: Category.Fantasy },
 	{ label: "Хоррор", value: Category.Horror },
@@ -55,17 +54,14 @@ export const CategoryOptions: BaseOptions<string, Category>[] = [
 	{ label: "Другое", value: Category.Other },
 ];
 
-export const СompletenessOptions: BaseOptions<
-	string,
-	СompletenessProductEnum
->[] = [
+export const СompletenessOptions: BaseOptions<string, boolean>[] = [
 	{
 		label: "завершенный",
-		value: СompletenessProductEnum.Completed,
+		value: true,
 	},
 	{
 		label: "незавершенный",
-		value: СompletenessProductEnum.InComplete,
+		value: false,
 	},
 ];
 

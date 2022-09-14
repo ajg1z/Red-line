@@ -14,4 +14,5 @@ export interface BookChard {
 	monthRating: number;
 	allTimeRating: number;
 	createdAt: string;
+	isComplete: boolean;
 }

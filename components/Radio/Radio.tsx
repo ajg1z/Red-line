@@ -1,3 +1,4 @@
+/* eslint-disable no-debugger */
 import React, { ForwardedRef } from "react";
 import styles from "./Radio.module.css";
 import { RadioProps } from "./Radio.types";
@@ -7,38 +8,37 @@ import { Keys } from "../../global-constans";
 
 export const Radio = React.forwardRef(
 	(
-		{ className, title, reverse, ...args }: RadioProps,
+		{ className, label, reverse, checked, ...args }: RadioProps,
 		ref: ForwardedRef<HTMLInputElement>
 	) => {
-		const inputRef = React.useRef<HTMLInputElement | null>(null);
-		const id = React.useMemo(() => v4(), []);
+		const labelRef = React.useRef<HTMLLabelElement | null>(null);
 		const handleKeyDown = (key: React.KeyboardEvent) => {
 			if (key.code === Keys.Space || key.code === Keys.Enter) {
-				if (inputRef.current) inputRef.current?.click();
+				if (labelRef.current) labelRef.current?.click();
 				key.preventDefault();
 			}
 		};
+
 		return (
-			<div
-				ref={ref}
-				className={cn(styles.container, reverse && styles.reverse)}
-			>
+			<label ref={labelRef} className={cn(styles.container, className)}>
 				<input
-					ref={inputRef}
+					checked={checked}
+					ref={ref}
+					className={styles.input}
 					type="radio"
-					className={cn(styles.radio, className)}
 					{...args}
-					id={id}
 				/>
-				<label
-					tabIndex={0}
-					onKeyDown={handleKeyDown}
-					htmlFor={id}
-					className={styles.label}
-				>
-					{title}
-				</label>
-			</div>
+				<span className={styles.check}>
+					<span
+						className={cn(styles.checked, {
+							[styles.active]: checked,
+						})}
+					/>
+				</span>
+				<span tabIndex={0} onKeyDown={handleKeyDown} className={styles.text}>
+					{label}
+				</span>
+			</label>
 		);
 	}
 );

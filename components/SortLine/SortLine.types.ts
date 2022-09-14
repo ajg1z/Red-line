@@ -3,7 +3,7 @@ import { BaseOptions } from "../../helpers/common-types";
 export interface SortItemProps {
 	label: string;
 	options: BaseOptions<string, any>[];
-	value: string | null;
+	value: string | null | boolean;
 	name: string;
 	setValue: (params: any) => void;
 }

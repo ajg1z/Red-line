@@ -18,3 +18,8 @@ export function propertyExist<T>(property: T[] | T) {
 export function createArray(length: number) {
 	return new Array(length).fill("").map((_, index) => index);
 }
+
+export function getQuery(queryValue: string | boolean | number, query: string) {
+	if (queryValue) return `${query}=${queryValue}&`;
+	return "";
+}

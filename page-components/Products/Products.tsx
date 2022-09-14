@@ -1,13 +1,18 @@
 import React, { Fragment } from "react";
-import {
-	ProductsProps,
-	SortProductEnum,
-	СompletenessProductEnum,
-} from "./Products.types";
+import { ProductsProps, SortProductEnum } from "./Products.types";
 import styles from "./Products.module.css";
 import { useRouter } from "next/router";
 import { Category, FormWorks, Pages } from "../../global-constans";
-import { Radio, Search, SortLine, Title } from "../../components";
+import {
+	BookCard,
+	Checkbox,
+	Divider,
+	Pagination,
+	Radio,
+	Search,
+	SortLine,
+	Title,
+} from "../../components";
 import {
 	CategoryOptions,
 	FormWorksOptions,
@@ -15,27 +20,52 @@ import {
 	СompletenessOptions,
 } from "./constans";
 import cn from "classnames";
+import { getCategoryProducts, getSortPriducts } from "./helpers/query-handle";
+import { Api } from "../../api";
+import { getQuery } from "../../helpers/functions";
 
-const Products: React.FC<ProductsProps> = () => {
+const Products: React.FC<ProductsProps> = ({ books, productsCount }) => {
+	const [limit, setLimit] = React.useState(10);
+	const [page, setPage] = React.useState(1);
+
+	const [sortedBooks, setSortedBooks] = React.useState(books);
+
 	const router = useRouter();
-	const isProsesPage = router.asPath === Pages.Prose;
 	const [search, setSearch] = React.useState("");
 	const [sort, setSort] = React.useState<SortProductEnum>(SortProductEnum.Best);
-	const [formWorks, setFormWorks] = React.useState<FormWorks>(
-		FormWorks.AllWorks
-	);
-	const [category, setCategory] = React.useState<Category[]>([
-		Category.AllCategory,
-	]);
-	const [isComplete, setIsComplete] = React.useState(
-		СompletenessProductEnum.Completed
-	);
+
+	const [formWork, setFormWork] = React.useState<FormWorks>(FormWorks.AllWorks);
+	const [category, setCategory] = React.useState<Category[]>([]);
+
+	const [isComplete, setIsComplete] = React.useState<boolean>(true);
+
 	const toggleCategory = (value: Category) => {
 		if (category.includes(value)) {
 			setCategory(category.filter((category) => category !== value));
 		} else setCategory([...category, value]);
 	};
-	const handleSearch = () => {};
+	const handleSearchProducts = async () => {
+		const categoriesQuery = getCategoryProducts(category);
+		const sortQuery = getSortPriducts(sort);
+		try {
+			const response = await Api.bookService.getBooks(`
+				?${sortQuery}${categoriesQuery}${getQuery(
+				formWork,
+				"formWork"
+			)}isComplete=${isComplete}&${getQuery(
+				search,
+				"q"
+			)}_limit=${limit}&_page=${page}
+			`);
+			setSortedBooks(response);
+		} catch (e) {
+			console.log(e);
+		}
+	};
+
+	React.useEffect(() => {
+		handleSearchProducts();
+	}, [sort, isComplete, formWork, category]);
 	return (
 		<div className={styles.container}>
 			<Title tag="h1" className={styles.title}>
@@ -44,7 +74,7 @@ const Products: React.FC<ProductsProps> = () => {
 			<div className={styles.sortOptions}>
 				<Search
 					onChangeInput={setSearch}
-					onClick={handleSearch}
+					onClick={handleSearchProducts}
 					className={styles.search}
 				/>
 				<SortLine
@@ -54,25 +84,22 @@ const Products: React.FC<ProductsProps> = () => {
 					setValue={setSort}
 					value={sort}
 				/>
-				{isProsesPage && (
-					<Fragment key={1}>
-						<SortLine
-							label="Тип"
-							name="type"
-							options={СompletenessOptions}
-							setValue={setIsComplete}
-							value={isComplete}
-						/>
 
-						<SortLine
-							label="Формы:"
-							name="form"
-							setValue={setFormWorks}
-							options={FormWorksOptions}
-							value={formWorks}
-						/>
-					</Fragment>
-				)}
+				<SortLine
+					label="Тип"
+					name="type"
+					options={СompletenessOptions}
+					setValue={setIsComplete}
+					value={isComplete}
+				/>
+
+				<SortLine
+					label="Формы:"
+					name="form"
+					setValue={setFormWork}
+					options={FormWorksOptions}
+					value={formWork}
+				/>
 
 				<ul className={styles.categoryList}>
 					<li>Категории:</li>
@@ -92,6 +119,26 @@ const Products: React.FC<ProductsProps> = () => {
 					})}
 				</ul>
 			</div>
+			<div className={styles.books}>
+				{sortedBooks.map((book) => {
+					return (
+						<Fragment key={book.id}>
+							<Divider margin={15} />
+							<BookCard
+								formWork={book.formWork}
+								genres={book.genres}
+								id={book.id}
+								title={book.title}
+								img={book.img}
+								description={book.description}
+								tags={book.tags}
+								size="small"
+							/>
+						</Fragment>
+					);
+				})}
+			</div>
+			<Pagination max={productsCount} page={page} setPage={setPage} />
 		</div>
 	);
 };

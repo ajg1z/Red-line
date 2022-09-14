@@ -10,8 +10,7 @@ export const FooterMenuLinks: BaseOptions[] = [
 	{ label: "Профиль", value: Pages.Personal },
 	{ label: "Иноформация", value: Pages.Info },
 	{ label: "Писатели", value: Pages.Users },
-	{ label: "Проза", value: Pages.Prose },
-	{ label: "Стихи", value: Pages.Poem },
+	{ label: "Произведения", value: Pages.Books },
 ];
 
 export const Footer: React.FC<FooterProps> = () => {

@@ -1,9 +1,9 @@
 import { DetailedHTMLProps, InputHTMLAttributes } from "react";
-export interface RadioProps
+
+export interface CheckboxProps
 	extends DetailedHTMLProps<
 		InputHTMLAttributes<HTMLInputElement>,
 		HTMLInputElement
 	> {
-	label: string;
-	reverse?: boolean;
+	label?: string;
 }

@@ -62,7 +62,6 @@ export enum Category {
 	Humor = "humor",
 	Philosophy = "philosophy",
 	Other = "other",
-	AllCategory = "",
 }
 
 // export type Category =
@@ -124,12 +123,10 @@ export type FormWorksType =
 
 export enum Pages {
 	Home = "/",
-	Poem = "/poem",
-	Prose = "/prose",
 	Users = "/users",
 	Personal = "/personal",
 	Info = "/info",
-	Book = "/book",
+	Books = "/books",
 }
 
 export const DefaultParams = {

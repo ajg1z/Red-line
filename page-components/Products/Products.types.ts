@@ -15,8 +15,3 @@ export enum SortProductEnum {
 	New = "new",
 	Best = "best",
 }
-
-export enum СompletenessProductEnum {
-	Completed = "completed",
-	InComplete = "inComplete",
-}

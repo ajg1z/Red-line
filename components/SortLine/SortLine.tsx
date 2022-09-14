@@ -19,7 +19,7 @@ export const SortLine: React.FC<SortItemProps> = React.memo(
 								name={name}
 								checked={option.value === value}
 								key={option.value}
-								title={option.label}
+								label={option.label}
 							/>
 						</>
 					);

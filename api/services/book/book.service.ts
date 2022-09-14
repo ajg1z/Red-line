@@ -1,4 +1,3 @@
-import { FormWorks } from "./../../../global-constans";
 import { $api } from "../..";
 import { BookChard } from "../../../interfaces/book.interface";
 
@@ -13,10 +12,9 @@ export default {
 		return data;
 	},
 
-	async getBooksCount(params: FormWorks.Poem | FormWorks.Story) {
-		const { data: books } = await $api.get<BookChard[]>(`/books`);
-		if (params === FormWorks.Poem)
-			return books.filter((book) => book.formWork === FormWorks.Poem).length;
-		return books.filter((book) => book.formWork === FormWorks.Story).length;
+	async getBooksCount() {
+		const { headers } = await $api.get<number>(`/books?_start=0&_end=0`);
+		if (headers["x-total-count"]) return +headers["x-total-count"];
+		return 0;
 	},
 };
