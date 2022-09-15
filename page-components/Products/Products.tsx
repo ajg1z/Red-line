@@ -65,7 +65,7 @@ const Products: React.FC<ProductsProps> = ({ books, productsCount }) => {
 
 	React.useEffect(() => {
 		handleSearchProducts();
-	}, [sort, isComplete, formWork, category]);
+	}, [sort, isComplete, formWork, category, page]);
 	return (
 		<div className={styles.container}>
 			<Title tag="h1" className={styles.title}>

@@ -1,0 +1,149 @@
+.topMenu {
+	width: 100%;
+	height: 40px;
+}
+
+.menuList {
+	display: flex;
+	gap: 15px;
+	height: 100%;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.menuItem {
+	height: 100%;
+	transition: all 0.2s;
+	border-bottom: 2px solid transparent;
+}
+
+.activeMenu {
+	transition: all 0.2s;
+	border-bottom-color: black;
+}
+
+.menuButton {
+	height: 100%;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 320px) {
+	.menuList {
+		justify-content: center;
+	}
+}
+
+.profile {
+	margin-bottom: 30px;
+}
+
+.mockImage {
+	width: 130px;
+	height: 145px;
+	background-color: green;
+	margin-bottom: 20px;
+}
+
+.topProfile {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 0;
+}
+
+.lastOnline {
+	font-size: 12px;
+	color: var(--white);
+	padding: 3px;
+	border-radius: 3px;
+	background-color: #777;
+}
+
+.content {
+	display: flex;
+	gap: 20px;
+}
+
+.left button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	display: block;
+	color: var(--link-color);
+	margin-bottom: 5px;
+}
+
+.right {
+	flex: 1 1 auto;
+}
+
+.fullName {
+	font-size: 18px;
+	margin-bottom: 5px;
+	font-weight: 700;
+}
+
+.rating {
+	margin-bottom: 5px;
+	font-weight: 700;
+}
+
+.rating span {
+	background-color: #5cb85c;
+	padding: 2px 5px;
+	font-size: 12px;
+	border-radius: 4px;
+	color: rgb(241, 238, 232);
+}
+
+.beginWrite {
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+.showStat {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	color: var(--link-color);
+}
+
+.topFriend {
+	height: 30px;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.titleFriend {
+	height: 100%;
+	width: max-content;
+	border-bottom: 1px solid black;
+}
+
+.friendsList {
+	display: flex;
+	column-gap: 8px;
+	flex-wrap: wrap;
+	row-gap: 8px;
+	padding-top: 10px;
+}
+
+.userIcon {
+	width: 18px;
+	height: 18px;
+}
+
+.friend {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+	color: var(--black-white);
+}
+
+.online {
+	color: var(--link-color);
+}
+
+.online svg {
+	fill: var(--link-color);
+}

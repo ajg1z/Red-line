@@ -144,3 +144,10 @@ export enum Keys {
 	Shift = "Shift",
 	Enter = "Enter",
 }
+
+export const RedirectError = {
+	redirect: {
+		destination: "/500",
+		statusCode: 301 as const,
+	},
+};

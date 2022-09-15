@@ -11,4 +11,8 @@ export default {
 		if (headers["x-total-count"]) return +headers["x-total-count"];
 		return 0;
 	},
+	async getUser(id: string) {
+		const { data } = await $api.get<Person>(`/users/${id}`);
+		return data;
+	},
 };
