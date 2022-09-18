@@ -1,0 +1,28 @@
+.container {
+	display: inline-block;
+
+	width: max-content;
+	padding: 2px 5px;
+
+	color: var(--white);
+	border-radius: 5px;
+
+	font-size: 12px;
+}
+
+.red {
+	background-color: var(--red);
+}
+
+.green {
+	color: #fff;
+	background-color: var(--green);
+}
+
+.orange {
+	background-color: var(--orange);
+}
+
+.black {
+	background-color: var(--week-black);
+}

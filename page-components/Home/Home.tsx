@@ -85,16 +85,7 @@ const HomePage: React.FC<HomeProps> = ({ statistics, books }) => {
 					return (
 						<Fragment key={prose.id}>
 							{index !== 0 && <Divider margin={15} />}
-							<BookCard
-								formWork={prose.formWork}
-								genres={prose.genres}
-								id={prose.id}
-								title={prose.title}
-								img={prose.img}
-								description={prose.description}
-								tags={prose.tags}
-								size="small"
-							/>
+							<BookCard {...prose} size="small" />
 						</Fragment>
 					);
 				})}
@@ -111,16 +102,7 @@ const HomePage: React.FC<HomeProps> = ({ statistics, books }) => {
 					return (
 						<Fragment key={poem.id}>
 							{index !== 0 && <Divider margin={15} />}
-							<BookCard
-								formWork={poem.formWork}
-								genres={poem.genres}
-								id={poem.id}
-								title={poem.title}
-								img={poem.img}
-								description={poem.description}
-								tags={poem.tags}
-								size="small"
-							/>
+							<BookCard {...poem} size="small" />
 						</Fragment>
 					);
 				})}
@@ -136,16 +118,7 @@ const HomePage: React.FC<HomeProps> = ({ statistics, books }) => {
 						return (
 							<div key={poem.id}>
 								{index !== 0 && <Divider margin={15} />}
-								<BookCard
-									formWork={poem.formWork}
-									genres={poem.genres}
-									id={poem.id}
-									title={poem.title}
-									img={poem.img}
-									description={poem.description}
-									tags={poem.tags}
-									size="small"
-								/>
+								<BookCard {...poem} size="small" />
 							</div>
 						);
 					})}
@@ -159,16 +132,7 @@ const HomePage: React.FC<HomeProps> = ({ statistics, books }) => {
 						return (
 							<div key={prose.id}>
 								{index !== 0 && <Divider margin={15} />}
-								<BookCard
-									formWork={prose.formWork}
-									genres={prose.genres}
-									id={prose.id}
-									title={prose.title}
-									img={prose.img}
-									description={prose.description}
-									tags={prose.tags}
-									size="small"
-								/>
+								<BookCard {...prose} size="small" />
 							</div>
 						);
 					})}

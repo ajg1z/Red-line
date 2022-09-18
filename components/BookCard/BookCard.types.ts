@@ -1,14 +1,14 @@
+import { Person } from "./../../interfaces/person.interface";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
+import { BookChard } from "../../interfaces/book.interface";
 
 export interface BookCardProps
-	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-	title: string;
-	img?: string;
-	genres: string[];
-	description?: string;
-	tags?: string[];
+	extends Omit<
+			DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
+			"id"
+		>,
+		BookChard {
 	size?: "normal" | "small";
-	author?: string;
-	id: string;
-	formWork: string;
+	edit?: boolean;
+	showStatus?: boolean;
 }

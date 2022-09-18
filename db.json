@@ -1,7 +1,7 @@
 {
 	"books": [
 		{
-			"title": "Виват, королева! Карл III, виват!",
+			"name": "Виват, королева! Карл III, виват!",
 			"img": "",
 			"genres": ["lyrics"],
 			"id": 1,
@@ -10,12 +10,15 @@
 			"allTimeRating": 900,
 			"adultContent": true,
 			"formWork": "poem",
+			"tags": ["Yuup"],
 			"createdAt": "2002-06-31",
 			"isComplete": true,
-			"author": 1
+			"author": 1,
+			"show": true,
+			"isPublished": true
 		},
 		{
-			"title": "Виват, TEST ",
+			"name": "Виват, TEST ",
 			"img": "",
 			"genres": ["lyrics"],
 			"id": -1,
@@ -26,10 +29,12 @@
 			"adultContent": true,
 			"formWork": "poetry-collection",
 			"createdAt": "1970-01-01",
-			"isComplete": true
+			"isComplete": true,
+			"show": true,
+			"isPublished": true
 		},
 		{
-			"title": "Душа взорвалась метеорами",
+			"name": "Душа взорвалась метеорами",
 			"img": "",
 			"author": 1,
 			"weekRating": 1,
@@ -39,10 +44,12 @@
 			"id": 2,
 			"formWork": "poem",
 			"createdAt": "2010-02-01",
-			"isComplete": true
+			"isComplete": true,
+			"show": true,
+			"isPublished": true
 		},
 		{
-			"title": "Легенды осени",
+			"name": "Легенды осени",
 			"img": "",
 			"weekRating": 0,
 			"monthRating": 0,
@@ -52,10 +59,12 @@
 			"author": 2,
 			"formWork": "poem",
 			"createdAt": "2015-12-01",
-			"isComplete": false
+			"isComplete": false,
+			"show": true,
+			"isPublished": true
 		},
 		{
-			"title": "Они среди нас",
+			"name": "Они среди нас",
 			"img": "",
 			"weekRating": 90,
 			"monthRating": 560,
@@ -68,10 +77,12 @@
 			"adultContent": true,
 			"formWork": "story",
 			"createdAt": "2017-02-01",
-			"isComplete": false
+			"isComplete": false,
+			"show": true,
+			"isPublished": true
 		},
 		{
-			"title": "Расплата",
+			"name": "Расплата",
 			"img": "",
 			"weekRating": 20,
 			"monthRating": 920,
@@ -83,10 +94,12 @@
 			"id": 5,
 			"formWork": "story",
 			"createdAt": "2018-02-01",
-			"isComplete": false
+			"isComplete": false,
+			"show": true,
+			"isPublished": true
 		},
 		{
-			"title": "Друзья на Севере.",
+			"name": "Друзья на Севере.",
 			"img": "",
 			"weekRating": 0,
 			"monthRating": 0,
@@ -99,10 +112,12 @@
 			"adultContent": true,
 			"formWork": "story",
 			"createdAt": "2019-01-01",
-			"isComplete": true
+			"isComplete": true,
+			"show": true,
+			"isPublished": true
 		},
 		{
-			"title": "Verte",
+			"name": "Verte",
 			"img": "",
 			"weekRating": 50,
 			"monthRating": 90,
@@ -114,10 +129,12 @@
 			"id": 7,
 			"formWork": "story",
 			"createdAt": "2020-02-01",
-			"isComplete": true
+			"isComplete": true,
+			"show": true,
+			"isPublished": true
 		},
 		{
-			"title": "Люрей 5",
+			"name": "Люрей 5",
 			"img": "",
 			"weekRating": 100,
 			"monthRating": 9020,
@@ -129,10 +146,12 @@
 			"id": 8,
 			"formWork": "story",
 			"createdAt": "2021-01-01",
-			"isComplete": false
+			"isComplete": false,
+			"show": true,
+			"isPublished": true
 		},
 		{
-			"title": "21 день я ем малиновые пирожные",
+			"name": "21 день я ем малиновые пирожные",
 			"img": "",
 			"weekRating": 0,
 			"monthRating": 0,
@@ -145,10 +164,12 @@
 			"adultContent": true,
 			"formWork": "novel",
 			"createdAt": "2021-11-01",
-			"isComplete": true
+			"isComplete": true,
+			"show": true,
+			"isPublished": true
 		},
 		{
-			"title": "На прощание",
+			"name": "На прощание",
 			"img": "",
 			"weekRating": 82,
 			"monthRating": 240,
@@ -158,10 +179,12 @@
 			"author": 1,
 			"formWork": "poem",
 			"createdAt": "2022-02-01",
-			"isComplete": true
+			"isComplete": true,
+			"show": true,
+			"isPublished": true
 		},
 		{
-			"title": "Я возьму два билета",
+			"name": "Я возьму два билета",
 			"img": "",
 			"weekRating": 2,
 			"monthRating": 30,
@@ -171,10 +194,12 @@
 			"formWork": "poem",
 			"author": 1,
 			"createdAt": "2022-07-01",
-			"isComplete": false
+			"isComplete": false,
+			"show": true,
+			"isPublished": true
 		},
 		{
-			"title": "Never give up",
+			"name": "Never give up",
 			"img": "",
 			"weekRating": 1890,
 			"monthRating": 3000,
@@ -182,9 +207,12 @@
 			"genres": ["lyrics", "realism"],
 			"id": 12,
 			"author": 1,
+			"description": "ртём Ботов — адвокат, занимающийся «иными» делами, находящийся на службе в организации под названием «Приход Посвященных». Его глаза видят немного больше, чем могут видеть глаза обычных людей. Артём видит «Их». Он точно знает, что они среди нас. Это сущности и духи из потустороннего загадочного мира, с которыми нужно постоянно бороться. Помогая другим, он позабыл о своей жизни",
 			"formWork": "poem",
 			"createdAt": "2022-11-01",
-			"isComplete": true
+			"isComplete": true,
+			"show": true,
+			"isPublished": true
 		}
 	],
 	"statistics": {
@@ -196,38 +224,29 @@
 	"comments": [
 		{
 			"id": 1,
-			"author": { "name": "Lialo", "id": 1 },
+			"author": 1,
 			"body": "представители любой религии ,равно как и основатели и тем паче 'боги'- первые и авторитетнейшие стяжатели",
-			"product": {
-				"id": 1,
-				"name": "Фридрих Вильгельм III и железный крест"
-			},
+			"product": 12,
 			"createdAt": "2022-09-11"
 		},
 		{
 			"id": 2,
-			"author": { "name": "Io", "id": 2 },
+			"author": 2,
 			"body": "Служил в ЗГВ, Если у кого-то 'два года в армии,- это две страницы вырванные из книги жизни' для меня это две дополнительные страницы для заметок",
-			"product": {
-				"id": 2,
-				"name": "Что мне дала служба в Советской Армии"
-			},
+			"product": 3,
 			"createdAt": "2022-09-10"
 		},
 		{
 			"id": 3,
-			"author": { "name": "DarkNight", "id": 3 },
+			"author": 3,
 			"body": "Вот ведь как бывает в нашей жизни. Наконец, ещё 2 судьбы встретились в жизни. Я, с удовольствием, прочитал ВАШУ чудесную повесть! Очень приятно было читать! Спасибо ВАМ! Надеюсь, что, очень скоро, увижу ВАШИ новые произведения.",
-			"product": {
-				"id": 2,
-				"name": "Три имени женщины."
-			},
+			"product": 2,
 			"createdAt": "2021-11-01"
 		}
 	],
 	"promoted-books": [
 		{
-			"title": "Они среди нас",
+			"name": "Они среди нас",
 			"img": "",
 			"genres": ["mystic", "prose", "fiction"],
 			"description": "Артём Ботов — адвокат, занимающийся «иными» делами, находящийся на службе в организации под названием «Приход Посвященных». Его глаза видят немного больше, чем могут видеть глаза обычных людей. Артём видит «Их». Он точно знает, что они среди нас. Это сущности и духи из потустороннего загадочного мира, с которыми нужно постоянно бороться. Помогая другим, он позабыл о своей жизни. Таких, как он, называют «контактирующими». Его ли это выбор? Справится ли Артём с возложенными на него обязанностями?",
@@ -237,7 +256,7 @@
 			"formWork": "Story"
 		},
 		{
-			"title": "Расплата",
+			"name": "Расплата",
 			"img": "",
 			"genres": ["adventure", "fantasy"],
 			"description": "Средневековое фэнтези. Итис и Аэдона, утомившиеся дорогой, останавливаются переночевать в небольшом захолустном городке. Герои сильно нервничают, постепенно открывается что они не совсем те, за кого себя выдают. Преследователи гоняться за ними по пятам. Попав в западню герои пытаются выжить, а затем сталкиваются с куда более опасным и жестоким противником.",
@@ -247,7 +266,7 @@
 			"formWork": "Story"
 		},
 		{
-			"title": "Друзья на Севере.",
+			"name": "Друзья на Севере.",
 			"img": "",
 			"genres": ["adventure", "fantasy", "journalism"],
 			"description": "Группа разведчиков направляется на север к Дальним Границам — суровым и диким местам, населённым не менее суровыми и дикими людьми. Тревожные слухи приходят из этих мест. Люди покидают свои дома, рассказывают о жестоких налётах. Разведчики попытаются узнать о том, что происходит на самом деле",
@@ -273,7 +292,9 @@
 				"beginWrite": 2020
 			},
 			"createdAt": "2022-02-02",
-			"friends": [3, 4]
+			"friends": [3, 4],
+			"recommended": [1, 2, 3],
+			"favorites": [1, 2]
 		},
 		{
 			"id": 2,
@@ -290,7 +311,9 @@
 				"beginWrite": 2021
 			},
 			"friends": [3, 4, 1],
-			"createdAt": "2018-02-01"
+			"createdAt": "2018-02-01",
+			"recommended": [1, 2, 3, 4, 5, 6, 7],
+			"favorites": [1]
 		},
 		{
 			"id": 3,
@@ -307,7 +330,9 @@
 				"beginWrite": 2012
 			},
 			"friends": [],
-			"createdAt": "2022-11-01"
+			"createdAt": "2022-11-01",
+			"recommended": [8, 9, 10],
+			"favorites": [1, 2, 3]
 		},
 		{
 			"id": 4,
@@ -324,7 +349,9 @@
 				"beginWrite": 2013
 			},
 			"friends": [3, 2, 5, 1],
-			"createdAt": "2022-12-22"
+			"createdAt": "2022-12-22",
+			"recommended": [11, 12, 6],
+			"favorites": [1]
 		},
 		{
 			"id": 5,
@@ -341,7 +368,9 @@
 				"beginWrite": 2001
 			},
 			"friends": [4, 3],
-			"createdAt": "2002-06-31"
+			"createdAt": "2002-06-31",
+			"recommended": [],
+			"favorites": []
 		},
 		{
 			"id": 6,
@@ -358,7 +387,9 @@
 				"beginWrite": 2018
 			},
 			"friends": [3, 5, 2, 1, 4, 6, 7, 8, 9],
-			"createdAt": "2019-01-01"
+			"createdAt": "2019-01-01",
+			"recommended": [12, 9],
+			"favorites": [12]
 		},
 		{
 			"id": 7,
@@ -375,7 +406,9 @@
 				"beginWrite": 1998
 			},
 			"friends": [],
-			"createdAt": "2015-12-01"
+			"createdAt": "2015-12-01",
+			"recommended": [10, 12, 3, 5, 6, 7, 8],
+			"favorites": [3, 4, 5, 6, 7]
 		},
 		{
 			"id": 8,
@@ -392,7 +425,9 @@
 				"beginWrite": 1989
 			},
 			"friends": [],
-			"createdAt": "2022-07-01"
+			"createdAt": "2022-07-01",
+			"recommended": [10, 6, 8],
+			"favorites": [5]
 		},
 		{
 			"id": 9,
@@ -409,7 +444,9 @@
 				"beginWrite": 2015
 			},
 			"friends": [],
-			"createdAt": "2022-10-01"
+			"createdAt": "2022-10-01",
+			"recommended": [12, 4, 6],
+			"favorites": [6, 7, 8]
 		},
 		{
 			"id": 10,
@@ -426,7 +463,9 @@
 				"beginWrite": 2001
 			},
 			"friends": [],
-			"createdAt": "2021-01-01"
+			"createdAt": "2021-01-01",
+			"recommended": [4, 5, 6],
+			"favorites": [3, 4, 5]
 		},
 		{
 			"id": 11,
@@ -443,7 +482,9 @@
 				"beginWrite": 2005
 			},
 			"friends": [],
-			"createdAt": "2020-02-01"
+			"createdAt": "2020-02-01",
+			"recommended": [6, 9, 8],
+			"favorites": [3]
 		},
 		{
 			"id": 12,
@@ -460,7 +501,9 @@
 				"beginWrite": 2001
 			},
 			"friends": [],
-			"createdAt": "2017-02-01"
+			"createdAt": "2017-02-01",
+			"recommended": [1, 2, 3, 6, 7, 8, 12],
+			"favorites": [11, 12, 10, 9]
 		},
 		{
 			"id": 13,
@@ -477,7 +520,9 @@
 				"beginWrite": 2000
 			},
 			"friends": [],
-			"createdAt": "2018-02-01"
+			"createdAt": "2018-02-01",
+			"recommended": [11, 10, 9],
+			"favorites": [2, 3, 4]
 		},
 		{
 			"id": 14,
@@ -494,7 +539,9 @@
 				"beginWrite": 2021
 			},
 			"friends": [],
-			"createdAt": "2020-02-01"
+			"createdAt": "2020-02-01",
+			"recommended": [6, 7, 8],
+			"favorites": [1, 11]
 		},
 		{
 			"id": 15,
@@ -511,7 +558,9 @@
 				"beginWrite": 2011
 			},
 			"friends": [],
-			"createdAt": "2020-02-01"
+			"createdAt": "2020-02-01",
+			"recommended": [2, 3, 4],
+			"favorites": [9]
 		},
 		{
 			"id": 16,
@@ -528,7 +577,9 @@
 				"beginWrite": 2005
 			},
 			"friends": [],
-			"createdAt": "2010-02-01"
+			"createdAt": "2010-02-01",
+			"recommended": [1, 2, 3],
+			"favorites": [8]
 		},
 		{
 			"id": 17,
@@ -545,7 +596,9 @@
 				"beginWrite": 2000
 			},
 			"friends": [1],
-			"createdAt": "2018-02-01"
+			"createdAt": "2018-02-01",
+			"recommended": [5, 6, 7],
+			"favorites": [2, 1]
 		},
 		{
 			"id": 18,
@@ -562,7 +615,9 @@
 				"beginWrite": 2003
 			},
 			"friends": [1],
-			"createdAt": "2022-02-01"
+			"createdAt": "2022-02-01",
+			"recommended": [],
+			"favorites": [5]
 		},
 		{
 			"id": 19,
@@ -579,7 +634,9 @@
 				"beginWrite": 1970
 			},
 			"friends": [],
-			"createdAt": "1970-01-01"
+			"createdAt": "1970-01-01",
+			"recommended": [],
+			"favorites": []
 		},
 		{
 			"id": 20,
@@ -596,7 +653,9 @@
 				"beginWrite": 2022
 			},
 			"friends": [],
-			"createdAt": "2022-09-11"
+			"createdAt": "2022-09-11",
+			"recommended": [],
+			"favorites": [1, 12]
 		},
 		{
 			"id": 21,
@@ -613,7 +672,35 @@
 				"beginWrite": 2022
 			},
 			"friends": [],
-			"createdAt": "2022-08-19"
+			"createdAt": "2022-08-19",
+			"recommended": [],
+			"favorites": []
+		}
+	],
+	"blogs": [
+		{
+			"id": 1,
+			"title": "Запись",
+			"body": "Цитирую: 'Многие понимают, что нашу генетику надо чистить. Но на стыке этой чистки стоят жестокость и милосердие.... Человечество ещё не доросло до этого.' ('Связь времён')",
+			"createdAt": "2002-06-31",
+			"rating": 1100,
+			"author": 1
+		},
+		{
+			"id": 2,
+			"title": "Запись 2",
+			"body": "Я не знаю почему, но именно эта песня очень значима для меня в творчестве Милен Фармер (California). Как бы я не пытался, но любой день весны и осени как традиция, на повторе Как-то мне приснилось, что вот она сама Милен идёт по красной ковровой дорожки и проходит мимо меня. В чёрном пиджачке. Этот сон до сих пор впился мне в голову, хоть и приснился мне слишком давно. Как жаль, что это не реальность. Единственное, что мне хотелось бы, сказать ей спасибо за её творчество. Оно мне по душе, но не является частью моей жизни. Просто поговорить и высказать огромную благодарность. Хотя для её трудов, просто спасибо не хватит",
+			"createdAt": "2003-06-31",
+			"rating": 6100,
+			"author": 1
+		},
+		{
+			"id": 3,
+			"title": "Запись 3",
+			"body": "Трудно предугадать землетрясение как, например, только что случившееся Иркутское.Но вот предсказать затмение, солнечное или лунное -- это азбука для современной астрономии. Почему же тогда мы узнаем о таких событиях позже, чем они совершились.Раньше о затмениях сообщалось в настенных календарях. Почему сейчас нет такого? Все стали такими умными? Или кто-то не считает это нужным для грамотного человека?",
+			"createdAt": "2003-06-31",
+			"rating": 16100,
+			"author": 2
 		}
 	]
 }

@@ -4,7 +4,7 @@ import { SidebarProps } from "./Sidebar.types";
 import cn from "classnames";
 import { BookCard, Divider, Title } from "../../components";
 import { AppContext } from "../../contexts/app-context";
-import { Comment } from "./components/comment/comment";
+import { Comment } from "./components/comment/Comment";
 
 export const Sidebar: React.FC<SidebarProps> = ({ className, ...args }) => {
 	const { lastComments, promotedBooks } = useContext(AppContext);
@@ -18,18 +18,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, ...args }) => {
 				return (
 					<>
 						{index !== 0 && <Divider margin={15} />}
-						<BookCard
-							className={styles.bookItem}
-							key={book.id}
-							formWork={book.formWork}
-							genres={book.genres}
-							id={book.id}
-							title={book.title}
-							img={book.img}
-							description={book.description}
-							tags={book.tags}
-							size="small"
-						/>
+						<BookCard {...book} size="small" />
 					</>
 				);
 			})}

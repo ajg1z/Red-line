@@ -1,0 +1,24 @@
+.title {
+	display: block;
+
+	width: max-content;
+	margin-bottom: 10px;
+
+	font-weight: 600;
+}
+
+.text {
+	display: box;
+	overflow: hidden;
+
+	margin-bottom: 5px;
+
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+/* stylelint-disable-next-line max-empty-lines */
+.createdAt {
+	color: var(--border-color);
+}

@@ -1,13 +1,15 @@
+import { Person } from "./person.interface";
 import { FormWorksType } from "../global-constans";
 
 export interface BookChard {
-	title: string;
+	name: string;
 	img?: string;
 	genres: string[];
 	description?: string;
 	tags?: string[];
-	author: string;
+	author: Person;
 	id: string;
+	body: string | string[];
 	formWork: FormWorksType;
 	adultContent?: boolean;
 	weekRating: number;
@@ -15,4 +17,7 @@ export interface BookChard {
 	allTimeRating: number;
 	createdAt: string;
 	isComplete: boolean;
+	show: boolean;
+	viewers: number;
+	isPublished: boolean;
 }

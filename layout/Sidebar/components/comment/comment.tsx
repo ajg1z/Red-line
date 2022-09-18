@@ -2,7 +2,7 @@ import React, { ForwardedRef } from "react";
 import { Link, Paragraph } from "../../../../components";
 import { Pages } from "../../../../global-constans";
 import styles from "./comment.module.css";
-import { CommentProps } from "./comment.types";
+import { CommentProps } from "./Comment.types";
 import cn from "classnames";
 
 export const Comment = React.forwardRef(
@@ -15,8 +15,8 @@ export const Comment = React.forwardRef(
 				<Link className={styles.author} href={`/${Pages.Users}/${author.id}`}>
 					{author.name} →
 				</Link>
-				<Link className={styles.product} href={`/${Pages.Book}/${product.id}`}>
-					{product.name}
+				<Link className={styles.product} href={`/${Pages.Books}/${product.id}`}>
+					{product.title}
 				</Link>
 				<Paragraph className={styles.text}>{body}</Paragraph>
 			</div>

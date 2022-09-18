@@ -55,8 +55,9 @@
 }
 
 .bttn:disabled {
-	opacity: 0.8;
 	cursor: not-allowed;
+
+	opacity: 0.8;
 }
 
 @media screen and (max-width: 480px) {

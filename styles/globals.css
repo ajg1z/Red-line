@@ -12,8 +12,13 @@ body {
 
 	background-color: var(--background);
 
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-		"Lucida Sans", Arial, sans-serif;
+	font-family:
+		"Trebuchet MS",
+		"Lucida Sans Unicode",
+		"Lucida Grande",
+		"Lucida Sans",
+		Arial,
+		sans-serif;
 	font-size: var(--font-size);
 	font-weight: 400;
 }
@@ -37,7 +42,11 @@ a {
 	--gray: #a3a6c5;
 	--white: white;
 	--white-blue: #838bfe;
-	--green: #34d87b;
+	--white-green: #34d87b;
 	--border-color: #ccc;
 	--black: black;
+	--red: #d9534f;
+	--orange: #f0ad4e;
+	--green: #5cb85c;
+	--week-black: #777;
 }

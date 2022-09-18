@@ -6,6 +6,8 @@ export interface Person {
 	info: PersonInfo;
 	friends: string[];
 	createdAt: string;
+	recommended: number[];
+	favorites: number[]; // избранные книги
 }
 
 export interface PersonInfo {

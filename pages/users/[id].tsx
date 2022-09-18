@@ -5,8 +5,22 @@ import { RedirectError } from "../../global-constans";
 import { withLayout } from "../../layout/layout";
 import User, { UserPageProps } from "../../page-components/User";
 
-const UserPage: NextPage<UserPageProps> = ({ books, friends, user }) => {
-	return <User books={books} friends={friends} user={user} />;
+const UserPage: NextPage<UserPageProps> = ({
+	books,
+	friends,
+	user,
+	genres,
+	booksCount,
+}) => {
+	return (
+		<User
+			booksCount={booksCount}
+			genres={genres}
+			books={books}
+			friends={friends}
+			user={user}
+		/>
+	);
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -25,14 +39,18 @@ export const getStaticProps: GetStaticProps<UserPageProps> = async (ctx) => {
 	try {
 		const user = await Api.userService.getUser(id);
 		const { comments, promotedBooks } = await Api.getSidebarData();
+		const countMyBooks = await Api.bookService.getBooksCount();
 		const friends = user.friends
 			? await Api.userService.getUsers(
 					`?${user.friends.map((friend) => `id=${friend}&`).join("")}`
 					// eslint-disable-next-line no-mixed-spaces-and-tabs
 			  )
 			: [];
-
-		const books = await Api.bookService.getBooks(`?author=${user.id}`);
+		const genres = await Api.bookService.getMyBooksGenres(user.id);
+		const books = await Api.bookService.getBooks(
+			`?author=${user.id}&_limit=10`,
+			true
+		);
 		return {
 			props: {
 				books,
@@ -40,6 +58,8 @@ export const getStaticProps: GetStaticProps<UserPageProps> = async (ctx) => {
 				promotedBooks,
 				friends,
 				user,
+				booksCount: countMyBooks,
+				genres,
 			},
 		};
 	} catch (e) {

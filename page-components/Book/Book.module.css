@@ -1,0 +1,24 @@
+.body {
+	margin-bottom: 20px;
+}
+
+.actionPanel {
+	padding: 10px;
+
+	border-radius: 5px;
+	background-color: #ccc;
+}
+
+.actionTop {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-bottom: 15px;
+}
+
+.actionFooter {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}

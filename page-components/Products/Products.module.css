@@ -21,6 +21,7 @@
 	align-items: center;
 	column-gap: 15px;
 	row-gap: 6px;
+
 	flex-wrap: wrap;
 }
 
@@ -29,9 +30,10 @@
 }
 
 .categoryItem button {
-	background-color: transparent;
 	cursor: pointer;
+
 	border: none;
+	background-color: transparent;
 }
 
 .books {

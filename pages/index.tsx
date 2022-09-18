@@ -14,7 +14,6 @@ export const getStaticProps: GetStaticProps<HomePageProps> = async () => {
 		const statistics = await Api.statistics();
 
 		const { promotedBooks, comments } = await Api.getSidebarData();
-
 		return {
 			props: { comments, promotedBooks, statistics, books },
 		};

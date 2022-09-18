@@ -124,16 +124,7 @@ const Products: React.FC<ProductsProps> = ({ books, productsCount }) => {
 					return (
 						<Fragment key={book.id}>
 							<Divider margin={15} />
-							<BookCard
-								formWork={book.formWork}
-								genres={book.genres}
-								id={book.id}
-								title={book.title}
-								img={book.img}
-								description={book.description}
-								tags={book.tags}
-								size="small"
-							/>
+							<BookCard {...book} size="small" />
 						</Fragment>
 					);
 				})}

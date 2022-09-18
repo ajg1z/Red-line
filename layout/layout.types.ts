@@ -1,3 +1,4 @@
+import { BookPageProps } from "./../page-components/Book/Book.types";
 import { HomeProps } from "./../page-components/Home/Home.types";
 import { AppContextPayload } from "./../interfaces/app-context.interface";
 import { ReactNode } from "react";
@@ -14,6 +15,7 @@ export interface LayoutProps
 		HomeProps,
 		UsersPageProps,
 		ProductsPageProps,
-		UserPageProps {
+		UserPageProps,
+		BookPageProps {
 	[key: string]: unknown;
 }

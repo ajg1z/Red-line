@@ -14,6 +14,8 @@ export const Pagination: React.FC<PaginationProps> = ({
 	const pagesCount = React.useMemo(() => {
 		return Math.ceil(max / 10);
 	}, [max]);
+
+	if (pagesCount <= 1) return <></>;
 	return (
 		<div className={cn(styles.container, className)} {...args}>
 			<button

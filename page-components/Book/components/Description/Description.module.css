@@ -1,0 +1,25 @@
+.top {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	margin-bottom: 10px;
+}
+
+.genres {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+
+	margin-bottom: 5px;
+}
+
+.genresList {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.description {
+	margin-bottom: 5px;
+}
