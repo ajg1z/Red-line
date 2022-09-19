@@ -1,0 +1,16 @@
+.textarea {
+	width: 100%;
+	resize: none;
+	border: none;
+	outline-color: var(--border-color);
+	border-radius: 5px;
+	padding: 8px;
+	min-height: 60px;
+	overflow-y: hidden;
+	word-wrap: break-word;
+	transition: all 0.1s;
+}
+
+.textarea::-webkit-scrollbar {
+	display: none;
+}

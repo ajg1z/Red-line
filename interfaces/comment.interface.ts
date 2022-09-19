@@ -1,9 +1,10 @@
-import { InitialBook } from "../api/services/book/book.interface";
+import { BookChard } from "./book.interface";
 import { Person } from "./person.interface";
 
 export interface CommentItem {
 	author: Person;
-	product: InitialBook;
+	product: BookChard;
 	body: string;
 	id: string;
+	createdAt: string;
 }

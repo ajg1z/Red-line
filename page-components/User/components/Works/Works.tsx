@@ -136,6 +136,25 @@ const Works: React.FC<WorksProps> = ({
 			);
 		return (
 			<div className={styles.myWorks}>
+				<div className={cn(styles.panel, styles.visible)}>
+					<ul className={styles.menuBooksList}>
+						{BooksMenuOptions.map((option) => {
+							return (
+								<li
+									key={option.value}
+									className={cn(styles.menuBooksItem, {
+										[styles.activeBooksItem]: option.value === menuBooks,
+									})}
+								>
+									<button onClick={() => setMenuBooks(option.value)}>
+										{option.label}
+										{option.count && `(${option.count})`}
+									</button>
+								</li>
+							);
+						})}
+					</ul>
+				</div>
 				<div className={styles.booksContent}>
 					{!books.length && (
 						<Paragraph>Опубликованных произведений еще нет.</Paragraph>
@@ -149,7 +168,7 @@ const Works: React.FC<WorksProps> = ({
 						);
 					})}
 				</div>
-				<div className={styles.panel}>
+				<div className={cn(styles.panel, styles.hidden)}>
 					<ul className={styles.menuBooksList}>
 						{BooksMenuOptions.map((option) => {
 							return (

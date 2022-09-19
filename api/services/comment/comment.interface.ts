@@ -3,4 +3,5 @@ export interface InitialComment {
 	product: string;
 	body: string;
 	id: string;
+	createdAt: string;
 }

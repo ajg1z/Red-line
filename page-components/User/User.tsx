@@ -8,7 +8,7 @@ import {
 import styles from "./User.module.css";
 import { MyWorksOptions, TopMenu } from "./constans";
 import cn from "classnames";
-import { BookCard, Button, Divider, Link, Title } from "../../components";
+import { BookCard, Button, Divider, Link, Tag, Title } from "../../components";
 import UserInfo from "./components/UserInfo/UserInfo";
 import UserIcon from "./user.svg";
 import getFormWorks from "../../api/services/book/helpers/getFormWorks";
@@ -18,6 +18,7 @@ import MenuList from "./components/MenuList";
 import Works from "./components/Works";
 import { useRouter } from "next/router";
 import Cabinet from "./components/chaptersMenu/Cabinet";
+import { TagColors } from "../../components/Tag/Tag.types";
 
 const User: React.FC<UserProps> = ({
 	books,
@@ -59,9 +60,9 @@ const User: React.FC<UserProps> = ({
 								</div>
 								<div className={styles.right}>
 									<p className={styles.fullName}>{user.info.fullName}</p>
-									<p className={styles.rating}>
+									<Tag className={styles.rating} bgColor={TagColors.Green}>
 										Баллы <span>{user.rating}</span>
-									</p>
+									</Tag>
 									{user.info.beginWrite && (
 										<p className={styles.beginWrite}>
 											Пишу с {user.info.beginWrite} года

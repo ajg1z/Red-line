@@ -12,13 +12,8 @@ body {
 
 	background-color: var(--background);
 
-	font-family:
-		"Trebuchet MS",
-		"Lucida Sans Unicode",
-		"Lucida Grande",
-		"Lucida Sans",
-		Arial,
-		sans-serif;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
 	font-size: var(--font-size);
 	font-weight: 400;
 }

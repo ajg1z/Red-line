@@ -1,3 +1,4 @@
+import { BookCard } from "./../../../components/BookCard/BookCard";
 import { CommentItem } from "./../../../interfaces/comment.interface";
 import { InitialBook } from "./../book/book.interface";
 import { Person } from "./../../../interfaces/person.interface";
@@ -5,11 +6,12 @@ import { $api } from "../..";
 import userService from "../user/user.service";
 import { InitialComment } from "./comment.interface";
 import bookService from "../book/book.service";
+import { BookChard } from "../../../interfaces/book.interface";
 
 export default {
 	async getComments(query?: string): Promise<CommentItem[]> {
 		const authors: Person[] = [];
-		const books: InitialBook[] = [];
+		const books: BookChard[] = [];
 		const { data } = await $api.get<InitialComment[]>(
 			`/comments${query ?? ""}`
 		);

@@ -6,8 +6,8 @@ import { withLayout } from "../../layout/layout";
 import Book from "../../page-components/Book";
 import { BookPageProps } from "../../page-components/Book/Book.types";
 
-const BookPage: NextPage<BookPageProps> = ({ book }) => {
-	return <Book book={book} />;
+const BookPage: NextPage<BookPageProps> = ({ book, commentsBooks, user }) => {
+	return <Book book={book} commentsBooks={commentsBooks} user={user} />;
 };
 
 export const getStaticProps: GetStaticProps<BookPageProps> = async (ctx) => {
@@ -18,9 +18,13 @@ export const getStaticProps: GetStaticProps<BookPageProps> = async (ctx) => {
 	try {
 		const book = await Api.bookService.getBook(+id);
 		if (!book) return RedirectError;
+		const author = await Api.userService.getUser(book.author.id);
+		const commentsBooks = await Api.commentService.getComments(
+			`?product=${book.id}`
+		);
 		const { comments, promotedBooks } = await Api.getSidebarData();
 		return {
-			props: { book, comments, promotedBooks },
+			props: { book, comments, promotedBooks, user: author, commentsBooks },
 		};
 	} catch (e) {
 		return RedirectError;

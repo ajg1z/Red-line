@@ -5,9 +5,9 @@ import styles from "./Book.module.css";
 import Description from "./components/Description";
 import { useRouter } from "next/router";
 import { Pages } from "../../global-constans";
-import { Button, Link } from "../../components";
+import { Button, Comments, Link } from "../../components";
 
-const Book: React.FC<BookProps> = ({ book }) => {
+const Book: React.FC<BookProps> = ({ book, commentsBooks, user }) => {
 	const [typeContent, setTypeContent] = React.useState<ContentBook>(
 		ContentBook.Description
 	);
@@ -42,13 +42,14 @@ const Book: React.FC<BookProps> = ({ book }) => {
 					</Link>
 					<p className={styles.viewers}>Просмотров: {book.viewers || 0}</p>
 					<p className={styles.countComments}>оценок нет</p>
-					<p>Опубликовано: {book.createdAt}</p>
 				</div>
 				<div className={styles.actionFooter}>
 					<Button variant="fill">Действие</Button>
 					<Button variant="fill">Оценить</Button>
+					<p className={styles.createdAt}>Опубликовано: {book.createdAt}</p>
 				</div>
 			</div>
+			<Comments id={book.id} author={user} comments={commentsBooks} />
 		</div>
 	);
 };

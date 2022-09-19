@@ -35,3 +35,31 @@
 .menuList {
 	margin-bottom: 20px;
 }
+
+.visible {
+	display: none;
+}
+
+@media screen and (max-width: 780px) {
+	.hidden {
+		display: none;
+	}
+
+	.myWorks {
+		flex-direction: column;
+		row-gap: 15px;
+	}
+
+	.visible {
+		overflow-x: scroll;
+		display: block;
+	}
+
+	.menuBooksList {
+		overflow-x: scroll;
+	}
+
+	.menuBooksItem {
+		white-space: nowrap;
+	}
+}

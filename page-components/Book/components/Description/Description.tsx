@@ -17,12 +17,14 @@ const Description: React.FC<DescriptionProps> = ({
 	return (
 		<div className={styles.container}>
 			<div className={styles.top}>
-				<Title tag="h1">{name}</Title>
+				<Title className={styles.title} tag="h1">
+					{name}
+				</Title>
 				<Button variant="fill" className={styles.read}>
 					Читать
 				</Button>
 			</div>
-			<Paragraph className={styles.genres}>
+			<div className={styles.genres}>
 				<span>Жанры: {formWork}</span> /
 				<ul className={styles.genresList}>
 					{genres.map((genre) => {
@@ -33,12 +35,12 @@ const Description: React.FC<DescriptionProps> = ({
 						);
 					})}
 				</ul>
-			</Paragraph>
+			</div>
 			<Paragraph className={styles.description}>
 				{description ?? "Аннотация отсутствует"}
 			</Paragraph>
 			{tags && (
-				<Paragraph className={styles.tags}>
+				<div className={styles.tags}>
 					<span>Теги: </span>
 					<ul className={styles.tagList}>
 						{tags.map((tag) => {
@@ -49,7 +51,7 @@ const Description: React.FC<DescriptionProps> = ({
 							);
 						})}
 					</ul>
-				</Paragraph>
+				</div>
 			)}
 
 			<Tag bgColor={TagColors.Black}>

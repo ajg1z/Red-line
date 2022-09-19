@@ -14,3 +14,5 @@ export * from "./SortLine/SortLine";
 export * from "./Checkbox/Checkbox";
 export * from "./BlogCard/BlogCard";
 export * from "./Tag/Tag";
+export * from "./Textarea/Textarea";
+export * from "./Comments/Comments";

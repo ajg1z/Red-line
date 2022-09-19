@@ -141,3 +141,9 @@
 .addBook {
 	padding: 8px 10px;
 }
+
+@media screen and (max-width: 480px) {
+	.content {
+		flex-direction: column;
+	}
+}
