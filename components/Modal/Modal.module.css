@@ -1,0 +1,32 @@
+.close {
+	right: 5px;
+	top: 5px;
+	color: var(--red);
+	transform: rotate(45deg);
+}
+
+.bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	min-height: 100vh;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.1s;
+	transform: scale(0);
+}
+
+.container {
+	position: relative;
+	width: 600px;
+	height: auto;
+	border-radius: 5px;
+	background-color: var(--white);
+}
+
+.open {
+	transform: scale(1);
+}

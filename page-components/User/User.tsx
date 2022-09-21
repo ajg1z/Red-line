@@ -46,19 +46,19 @@ const User: React.FC<UserProps> = ({
 								<p className={styles.lastOnline}>08:52 15.09.2022</p>
 							</div>
 							<div className={styles.content}>
-								<div className={styles.left}>
-									<div className={styles.mockImage}></div>
+								<div className={styles.mockImage}></div>
+								<div className={styles.action}>
 									<button className={styles.write}>Написать</button>
 									<button className={styles.addToFriend}>
 										Добавить в друзья
 									</button>
-									<Divider />
+									<Divider className={styles.divider} />
 									<button className={styles.complain}>Жалоба</button>
 									<button className={styles.addToBlaclList}>
 										Добавить в ЧС
 									</button>
 								</div>
-								<div className={styles.right}>
+								<div className={styles.userStat}>
 									<p className={styles.fullName}>{user.info.fullName}</p>
 									<Tag className={styles.rating} bgColor={TagColors.Green}>
 										Баллы <span>{user.rating}</span>
@@ -70,20 +70,21 @@ const User: React.FC<UserProps> = ({
 									)}
 									<button className={styles.showStat}>Статистика</button>
 									<div className={styles.statistics}></div>
-									<Divider />
-									<div className={styles.userInfo}>
-										<UserInfo label="Возраст" value={user.info.age} />
-										<UserInfo label="Город" value={user.info.city} />
-										<UserInfo
-											label="Предпочитаю"
-											value={user.info.preferGenres}
-										/>
-										<UserInfo
-											label="Любимые книги"
-											value={user.info.favoriteBooks}
-										/>
-										<UserInfo label="О себе" value={user.info.description} />
-									</div>
+									<Divider className={styles.divider} />
+								</div>
+
+								<div className={styles.userInfo}>
+									<UserInfo label="Возраст" value={user.info.age} />
+									<UserInfo label="Город" value={user.info.city} />
+									<UserInfo
+										label="Предпочитаю"
+										value={user.info.preferGenres}
+									/>
+									<UserInfo
+										label="Любимые книги"
+										value={user.info.favoriteBooks}
+									/>
+									<UserInfo label="О себе" value={user.info.description} />
 								</div>
 							</div>
 						</div>

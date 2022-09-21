@@ -1,0 +1,54 @@
+.signIn {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.top {
+	width: 100%;
+	display: flex;
+}
+
+.top > div {
+	flex: 1 1 50%;
+	text-align: center;
+	padding: 20px 0;
+	cursor: pointer;
+	background-color: var(--border-color);
+}
+
+.content {
+	padding: 20px;
+}
+
+.selected {
+	background-color: var(--white) !important;
+}
+
+.close {
+	position: absolute;
+	right: -25px;
+	top: -35px;
+	transform: rotate(45deg);
+	font-size: 45px;
+	color: var(--white);
+	background-color: transparent;
+	border: none;
+}
+
+.bttn {
+	width: 100%;
+	background-color: var(--white-blue);
+	height: 40px;
+	border-radius: 2px;
+}
+
+.input {
+	border-radius: 2px;
+	height: 40px;
+	border: 1px solid var(--border-color);
+}
+
+.body {
+	margin-bottom: 20px;
+}

@@ -7,7 +7,6 @@ import { BookCardProps } from "./BookCard.types";
 import { Link } from "../Link/Link";
 import { Tag } from "../Tag/Tag";
 import { TagColors } from "../Tag/Tag.types";
-import { Button } from "../Button/Button";
 
 export const BookCard = React.forwardRef(
 	(

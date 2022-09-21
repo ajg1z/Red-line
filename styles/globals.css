@@ -44,4 +44,5 @@ a {
 	--orange: #f0ad4e;
 	--green: #5cb85c;
 	--week-black: #777;
+	--transparent-black: rgba(0, 0, 0, 0.5);
 }

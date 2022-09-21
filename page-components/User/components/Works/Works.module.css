@@ -50,13 +50,18 @@
 		row-gap: 15px;
 	}
 
+	.panel {
+		flex: 1 1 auto;
+	}
+
 	.visible {
-		overflow-x: scroll;
 		display: block;
 	}
 
 	.menuBooksList {
-		overflow-x: scroll;
+		flex-direction: row;
+		flex-wrap: wrap;
+		row-gap: 10px;
 	}
 
 	.menuBooksItem {

@@ -6,8 +6,9 @@ import ArrowIcon from "./icons/arrow.svg";
 import UserIcon from "./icons/user.svg";
 import MenuIcon from "./icons/menu.svg";
 import cn from "classnames";
-import { Search } from "../../components";
+import { Modal, Search } from "../../components";
 import { Pages } from "../../global-constans";
+import AuthModal from "./components/AuthModal/AuthModal";
 
 export const MENU_ITEMS = [
 	{ label: "Люди", link: Pages.Users },
@@ -17,12 +18,15 @@ export const MENU_ITEMS = [
 export const Header: React.FC<HeaderProps> = () => {
 	const [isShowMenu, setIsShowMenu] = React.useState(false);
 
+	const [isOpen, setIsOpen] = React.useState(false);
+
 	function handleToggleMenu() {
 		setIsShowMenu(!isShowMenu);
 	}
 
 	return (
 		<header className={styles.header}>
+			<AuthModal isOpen={isOpen} setIsOpen={setIsOpen} />
 			<div className={styles.container}>
 				<h2 className={styles.logo}>
 					<Link href={"/"}>RED-Line</Link>
@@ -48,7 +52,7 @@ export const Header: React.FC<HeaderProps> = () => {
 				<button className={styles.extraOptions}>
 					Еще <ArrowIcon className={styles.arrowIcon} />
 				</button>
-				<div className={styles.profile}>
+				<div onClick={() => setIsOpen(true)} className={styles.profile}>
 					<button>Войти</button>
 					<UserIcon />
 				</div>

@@ -2,12 +2,42 @@
 	margin-bottom: 30px;
 }
 
+.content {
+	display: grid;
+	grid-template-areas:
+		"image userStat userStat"
+		"image userStat userStat"
+		"image userStat userStat"
+		"action userInfo userInfo"
+		"action userInfo userInfo"
+		"action userInfo userInfo";
+	grid-template-columns: 130px 1fr;
+	column-gap: 20px;
+	row-gap: 20px;
+	grid-template-rows: auto auto 40px auto auto auto;
+}
+
 .mockImage {
 	width: 130px;
 	height: 145px;
-	margin-bottom: 20px;
 
 	background-color: green;
+	grid-area: image;
+}
+
+.action {
+	grid-area: action;
+}
+
+.userStat {
+	grid-area: userStat;
+	align-self: flex-start;
+}
+
+.userInfo {
+	grid-area: userInfo;
+	grid-column: 2/-1;
+	grid-row: 3/-1;
 }
 
 .topProfile {
@@ -32,12 +62,7 @@
 	font-size: 12px;
 }
 
-.content {
-	display: flex;
-	gap: 20px;
-}
-
-.left button {
+.action button {
 	display: block;
 
 	margin-bottom: 5px;
@@ -145,5 +170,23 @@
 @media screen and (max-width: 480px) {
 	.content {
 		flex-direction: column;
+		grid-template-areas:
+			"image action"
+			"image action"
+			"image action"
+			"userStat userStat"
+			"userStat userStat"
+			"userInfo userInfo"
+			"userInfo userInfo";
+		row-gap: 10px;
+	}
+
+	.userInfo {
+		grid-column: 1/-1;
+		grid-row: auto;
+	}
+
+	.userStat hr {
+		margin-bottom: 0 !important;
 	}
 }

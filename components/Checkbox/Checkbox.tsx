@@ -7,6 +7,7 @@ import { Keys } from "../../global-constans";
 export const Checkbox: React.FC<CheckboxProps> = ({
 	className,
 	label,
+	size = "middle",
 	...args
 }) => {
 	const inputRef = React.useRef<HTMLInputElement | null>(null);
@@ -18,10 +19,6 @@ export const Checkbox: React.FC<CheckboxProps> = ({
 		}
 	};
 
-	React.useEffect(() => {
-		console.log(inputRef.current?.checked);
-	}, [inputRef.current?.checked]);
-
 	return (
 		<label className={cn(styles.container, className)}>
 			<input
@@ -30,7 +27,12 @@ export const Checkbox: React.FC<CheckboxProps> = ({
 				type="checkbox"
 				{...args}
 			/>
-			<span className={styles.check}>
+			<span
+				className={cn(styles.check, {
+					[styles.smallCheck]: size == "small",
+					[styles.middleCheck]: size === "middle",
+				})}
+			>
 				<span
 					className={cn(styles.checked, {
 						[styles.active]: inputRef.current?.checked,

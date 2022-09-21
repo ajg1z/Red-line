@@ -163,7 +163,7 @@ const Works: React.FC<WorksProps> = ({
 						return (
 							<Fragment key={book.id}>
 								{index !== 0 && <Divider margin={15} />}
-								<BookCard {...book} size="small" />
+								<BookCard {...book} />
 							</Fragment>
 						);
 					})}

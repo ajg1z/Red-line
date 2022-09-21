@@ -376,6 +376,7 @@ li {
 	list-style: none;
 }
 
-.button {
+/* stylelint-disable-next-line no-descending-specificity */
+button {
 	cursor: pointer;
 }

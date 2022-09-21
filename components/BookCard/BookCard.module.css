@@ -10,11 +10,18 @@
 	background-color: green;
 }
 
+.top {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
 .title {
 	display: inline-flex;
 
-	width: max-content;
 	margin-bottom: 5px;
+	align-items: flex-start;
 
 	color: var(--link-color);
 
