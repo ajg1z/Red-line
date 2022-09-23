@@ -1,0 +1,19 @@
+.container {
+	margin-bottom: 10px;
+}
+
+.container label {
+	font-weight: 600;
+	color: inherit;
+}
+
+.input {
+	border-radius: 2px;
+	border-color: 1px solid var(--border-color);
+}
+
+.textarea {
+	border-radius: 2px;
+	height: 80px;
+	border: 1px solid var(--border-color);
+}

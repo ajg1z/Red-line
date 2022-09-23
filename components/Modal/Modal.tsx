@@ -9,6 +9,7 @@ export const Modal: React.FC<ModalProps> = ({
 	children,
 	hideCloseIcon,
 	isOpen,
+	close,
 	...args
 }) => {
 	if (typeof document === "undefined") return <></>;
@@ -24,8 +25,15 @@ export const Modal: React.FC<ModalProps> = ({
 	}, [isOpen]);
 
 	return ReactDOM.createPortal(
-		<div className={cn(styles.bg, { [styles.open]: isOpen })}>
-			<div className={cn(styles.container, className)} {...args}>
+		<div
+			className={cn(styles.bg, { [styles.open]: isOpen })}
+			onClick={() => close(false)}
+		>
+			<div
+				className={cn(styles.container, className)}
+				{...args}
+				onClick={(e) => e.stopPropagation()}
+			>
 				{!hideCloseIcon && <div className={styles.close}>+</div>}
 				{children}
 			</div>

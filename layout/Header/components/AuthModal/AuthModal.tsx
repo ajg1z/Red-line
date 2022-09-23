@@ -3,28 +3,28 @@ import React from "react";
 import { Button, Checkbox, Input, Modal } from "../../../../components";
 import styles from "./AuthModal.module.css";
 import { AuthModalProps, TypeAuth } from "./AuthModal.types";
+import FormField from "./components/FormField/FormField";
+import { FormProvider } from "react-hook-form";
+import SignUp from "./components/SignUp/SignUp";
+import SignIn from "./components/SignIn/SignIn";
 
 const AuthModal: React.FC<AuthModalProps> = ({ isOpen, setIsOpen }) => {
 	const [typeAuth, setTypeAuth] = React.useState<TypeAuth>(TypeAuth.SignIn);
+	const [stageRecord, setStateRecord] = React.useState<number>(0);
 
 	const reducerContent = React.useMemo(() => {
-		if (typeAuth === TypeAuth.SignIn)
-			return (
-				<div className={styles.signIn}>
-					<Input className={styles.input} placeholder="E-mail" />
-					<Input className={styles.input} placeholder="Пароль" />
-					<Checkbox className={styles.checkbox} label="Запомнить меню" />
-				</div>
-			);
-		return <div className={styles.signUp}></div>;
-	}, [typeAuth]);
+		if (typeAuth === TypeAuth.SignUp)
+			return <SignUp setStage={setStateRecord} stage={stageRecord} />;
+		return <SignIn />;
+	}, [typeAuth, stageRecord]);
 
 	function handleClose() {
 		setIsOpen(false);
+		setStateRecord(0);
 	}
 
 	return (
-		<Modal isOpen={isOpen} hideCloseIcon>
+		<Modal isOpen={isOpen} hideCloseIcon close={setIsOpen}>
 			<button onClick={handleClose} className={styles.close}>
 				+
 			</button>
@@ -46,14 +46,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, setIsOpen }) => {
 					Регистрация
 				</div>
 			</div>
-			<div className={styles.content}>
-				<div className={styles.body}>{reducerContent}</div>
-				<div className={styles.footer}>
-					<Button className={styles.bttn}>
-						{typeAuth === TypeAuth.SignIn ? "Войти" : "Зарегестрироваться"}
-					</Button>
-				</div>
-			</div>
+			<div className={styles.content}>{reducerContent}</div>
 		</Modal>
 	);
 };

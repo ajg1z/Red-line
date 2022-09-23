@@ -13,7 +13,7 @@
 .expandingInput:focus,
 .input:focus {
 	border-color: var(--black-blue);
-	box-shadow: 0 0 0 2px var(--black-blue);
+	box-shadow: 0 0 0 1px var(--black-blue);
 }
 
 .input::placeholder {
@@ -27,8 +27,21 @@
 .label {
 	display: block;
 
-	margin-bottom: 2px;
+	margin-bottom: 5px;
 	margin-left: 2px;
 
 	color: var(--white);
+}
+
+.input[type="date"] {
+	border-radius: 0;
+	height: 30px;
+	width: max-content;
+	padding: 5px;
+	border-color: 1px solid var(--border-color);
+	box-shadow: none;
+}
+
+.error {
+	border-color: var(--red) !important;
 }

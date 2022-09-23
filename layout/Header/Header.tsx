@@ -6,7 +6,7 @@ import ArrowIcon from "./icons/arrow.svg";
 import UserIcon from "./icons/user.svg";
 import MenuIcon from "./icons/menu.svg";
 import cn from "classnames";
-import { Modal, Search } from "../../components";
+import { Search } from "../../components";
 import { Pages } from "../../global-constans";
 import AuthModal from "./components/AuthModal/AuthModal";
 
@@ -79,7 +79,10 @@ export const Header: React.FC<HeaderProps> = () => {
 				<button className={cn(styles.extraOptions, styles.visibleOptions)}>
 					Еще <ArrowIcon className={styles.arrowIcon} />
 				</button>
-				<div className={cn(styles.profile, styles.visibleProfile)}>
+				<div
+					onClick={() => setIsOpen(true)}
+					className={cn(styles.profile, styles.visibleProfile)}
+				>
 					<button>Войти</button>
 				</div>
 			</div>

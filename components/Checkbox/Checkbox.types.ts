@@ -1,4 +1,5 @@
 import { DetailedHTMLProps, InputHTMLAttributes } from "react";
+import { FieldError } from "react-hook-form";
 
 export interface CheckboxProps
 	extends Omit<
@@ -7,4 +8,5 @@ export interface CheckboxProps
 	> {
 	label?: string;
 	size?: "small" | "middle";
+	error?: Omit<FieldError, "type">;
 }

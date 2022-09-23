@@ -5,7 +5,7 @@ import cn from "classnames";
 
 export const Input = React.forwardRef(
 	(
-		{ className, label, labelClass, ...args }: InputProps,
+		{ className, label, labelClass, error, ...args }: InputProps,
 		ref: ForwardedRef<HTMLInputElement>
 	) => {
 		return (
@@ -13,7 +13,11 @@ export const Input = React.forwardRef(
 				{label && (
 					<label className={cn(styles.label, labelClass)}>{label}</label>
 				)}
-				<input ref={ref} className={cn(className, styles.input)} {...args} />
+				<input
+					ref={ref}
+					className={cn(className, styles.input, { [styles.error]: !!error })}
+					{...args}
+				/>
 			</div>
 		);
 	}

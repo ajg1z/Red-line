@@ -11,6 +11,33 @@
 	transition: all 0.1s;
 }
 
-.textarea::-webkit-scrollbar {
-	display: none;
+.label {
+	display: block;
+
+	margin-bottom: 5px;
+	margin-left: 2px;
+
+	color: var(--white);
+}
+
+.onScroll {
+	overflow-y: auto;
+}
+
+.onScroll::-webkit-scrollbar {
+	width: 8px;
+}
+
+.onScroll::-webkit-scrollbar-track {
+	background: var(--border-color);
+}
+
+.onScroll::-webkit-scrollbar-thumb {
+	background-color: var(--black-blue);
+	border-radius: 5px;
+	border: 1px solid var(--border-color);
+}
+
+.error {
+	border-color: var(--red) !important;
 }

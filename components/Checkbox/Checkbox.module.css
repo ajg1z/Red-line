@@ -46,3 +46,7 @@
 .active {
 	background-color: green;
 }
+
+.error {
+	border-color: var(--red) !important;
+}

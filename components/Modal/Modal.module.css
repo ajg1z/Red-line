@@ -9,24 +9,37 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100vw;
+	right: 0;
+	bottom: 0;
+	min-width: 100vw;
 	min-height: 100vh;
 	background-color: rgba(0, 0, 0, 0.6);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: all 0.1s;
-	transform: scale(0);
+	transition: all 0.2s;
+	opacity: 0;
+	visibility: hidden;
 }
 
 .container {
 	position: relative;
-	width: 600px;
+	width: 50%;
 	height: auto;
+	/* overflow-x: hidden; */
+	max-height: 650px;
+	/* overflow-y: auto; */
 	border-radius: 5px;
 	background-color: var(--white);
 }
 
 .open {
-	transform: scale(1);
+	opacity: 1;
+	visibility: visible;
+}
+
+@media screen and (max-width: 780px) {
+	.container {
+		width: 85%;
+	}
 }

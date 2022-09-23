@@ -5,19 +5,32 @@ import cn from "classnames";
 
 export const Textarea = React.forwardRef(
 	(
-		{ className, ...args }: TextareaProps,
+		{ className, label, labelClass, scroll, error, ...args }: TextareaProps,
 		ref: React.ForwardedRef<HTMLTextAreaElement>
 	) => {
+		const id = new Date().getTime().toString();
 		return (
-			<textarea
-				ref={ref}
-				onInput={(e) => {
-					e.currentTarget.style.height = "auto";
-					e.currentTarget.style.height = e.currentTarget.scrollHeight + "px";
-				}}
-				className={cn(styles.textarea, className)}
-				{...args}
-			/>
+			<div className={styles.container}>
+				{label && (
+					<label className={cn(labelClass, styles.label)} htmlFor={id}>
+						{label}
+					</label>
+				)}
+				<textarea
+					id={id}
+					ref={ref}
+					onInput={(e) => {
+						if (scroll) return;
+						e.currentTarget.style.height = "auto";
+						e.currentTarget.style.height = e.currentTarget.scrollHeight + "px";
+					}}
+					className={cn(styles.textarea, className, {
+						[styles.onScroll]: scroll,
+						[styles.error]: !!error,
+					})}
+					{...args}
+				/>
+			</div>
 		);
 	}
 );

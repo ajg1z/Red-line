@@ -8,6 +8,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
 	className,
 	label,
 	size = "middle",
+	error,
 	...args
 }) => {
 	const inputRef = React.useRef<HTMLInputElement | null>(null);
@@ -31,6 +32,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
 				className={cn(styles.check, {
 					[styles.smallCheck]: size == "small",
 					[styles.middleCheck]: size === "middle",
+					[styles.error]: !!error,
 				})}
 			>
 				<span

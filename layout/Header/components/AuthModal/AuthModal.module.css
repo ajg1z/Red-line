@@ -27,8 +27,8 @@
 
 .close {
 	position: absolute;
-	right: -25px;
-	top: -35px;
+	right: -35px;
+	top: -45px;
 	transform: rotate(45deg);
 	font-size: 45px;
 	color: var(--white);
@@ -36,11 +36,10 @@
 	border: none;
 }
 
-.bttn {
-	width: 100%;
-	background-color: var(--white-blue);
-	height: 40px;
-	border-radius: 2px;
+@media screen and (max-width: 780px) {
+	.close {
+		right: 0px;
+	}
 }
 
 .input {
@@ -49,6 +48,12 @@
 	border: 1px solid var(--border-color);
 }
 
-.body {
-	margin-bottom: 20px;
+.labelInput {
+	font-weight: 600;
+	color: inherit;
+}
+
+.textarea {
+	border-radius: 2px;
+	border: 1px solid var(--border-color);
 }
