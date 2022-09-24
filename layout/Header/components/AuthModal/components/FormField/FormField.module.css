@@ -3,17 +3,19 @@
 }
 
 .container label {
-	font-weight: 600;
 	color: inherit;
+
+	font-weight: 600;
 }
 
 .input {
-	border-radius: 2px;
 	border-color: 1px solid var(--border-color);
+	border-radius: 2px;
 }
 
 .textarea {
-	border-radius: 2px;
 	height: 80px;
+
 	border: 1px solid var(--border-color);
+	border-radius: 2px;
 }

@@ -5,15 +5,20 @@
 }
 
 .top {
-	width: 100%;
 	display: flex;
+
+	width: 100%;
 }
 
-.top > div {
+.top > button {
 	flex: 1 1 50%;
-	text-align: center;
+
 	padding: 20px 0;
+
 	cursor: pointer;
+	text-align: center;
+
+	border: none;
 	background-color: var(--border-color);
 }
 
@@ -27,33 +32,38 @@
 
 .close {
 	position: absolute;
-	right: -35px;
 	top: -45px;
+	right: -35px;
+
 	transform: rotate(45deg);
-	font-size: 45px;
+
 	color: var(--white);
-	background-color: transparent;
 	border: none;
+	background-color: transparent;
+
+	font-size: 45px;
 }
 
 @media screen and (max-width: 780px) {
 	.close {
-		right: 0px;
+		right: 0;
 	}
 }
 
 .input {
-	border-radius: 2px;
 	height: 40px;
+
 	border: 1px solid var(--border-color);
+	border-radius: 2px;
 }
 
 .labelInput {
-	font-weight: 600;
 	color: inherit;
+
+	font-weight: 600;
 }
 
 .textarea {
-	border-radius: 2px;
 	border: 1px solid var(--border-color);
+	border-radius: 2px;
 }

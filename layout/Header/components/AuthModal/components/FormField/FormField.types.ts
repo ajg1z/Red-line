@@ -5,7 +5,9 @@ export interface FormFieldProps
 			DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>,
 			"key"
 		>,
-		FormField {}
+		FormField {
+	tabIndex?: number;
+}
 
 export interface FormField {
 	name: string;

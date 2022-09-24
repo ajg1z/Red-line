@@ -1,14 +1,17 @@
 .textarea {
-	width: 100%;
-	resize: none;
-	border: none;
-	outline-color: var(--border-color);
-	border-radius: 5px;
-	padding: 8px;
-	min-height: 60px;
 	overflow-y: hidden;
-	word-wrap: break-word;
+
+	width: 100%;
+	min-height: 60px;
+	padding: 8px;
+
+	resize: none;
 	transition: all 0.1s;
+	word-wrap: break-word;
+
+	border: none;
+	border-radius: 5px;
+	outline-color: var(--border-color);
 }
 
 .label {
@@ -33,9 +36,9 @@
 }
 
 .onScroll::-webkit-scrollbar-thumb {
-	background-color: var(--black-blue);
-	border-radius: 5px;
 	border: 1px solid var(--border-color);
+	border-radius: 5px;
+	background-color: var(--black-blue);
 }
 
 .error {

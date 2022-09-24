@@ -2,11 +2,11 @@
 	padding: 5px 10px;
 
 	cursor: pointer;
+	transition: all 0.2s ease-in;
 
 	color: var(--white);
 	border: none;
 	border-radius: 10px;
-	transition: all 0.2s ease-in;
 }
 
 .button:focus {

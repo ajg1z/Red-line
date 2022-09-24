@@ -1,11 +1,11 @@
 .top {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	justify-content: space-between;
 
 	margin-bottom: 10px;
 	gap: 10px;
-	flex-wrap: wrap;
 }
 
 .genres,
@@ -30,6 +30,7 @@
 
 .read {
 	padding: 8px 12px;
+
 	border-radius: 3px;
 }
 

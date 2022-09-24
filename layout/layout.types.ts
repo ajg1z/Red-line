@@ -5,9 +5,11 @@ import { ReactNode } from "react";
 import { UsersPageProps } from "../page-components/Users";
 import { ProductsPageProps } from "../page-components/Products";
 import { UserPageProps } from "../page-components/User";
+import { InfoPageProps } from "../page-components/Info";
 
 export interface MainLayoutProps {
 	children: ReactNode;
+	notSidebar?: boolean;
 }
 
 export interface LayoutProps
@@ -16,6 +18,7 @@ export interface LayoutProps
 		UsersPageProps,
 		ProductsPageProps,
 		UserPageProps,
-		BookPageProps {
+		BookPageProps,
+		InfoPageProps {
 	[key: string]: unknown;
 }

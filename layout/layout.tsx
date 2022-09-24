@@ -7,13 +7,16 @@ import styles from "./layout.module.css";
 import { LayoutProps, MainLayoutProps } from "./layout.types";
 import { Sidebar } from "./Sidebar/Sidebar";
 
-export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
+export const MainLayout: React.FC<MainLayoutProps> = ({
+	children,
+	notSidebar,
+}) => {
 	return (
-		<div className={styles.container}>
+		<div id="layout" className={styles.container}>
 			<Header />
 			<div className={styles.layout}>
 				<main className={styles.main}>{children}</main>
-				<Sidebar />
+				{notSidebar === false && <Sidebar />}
 			</div>
 			<Footer />
 		</div>
@@ -27,7 +30,7 @@ export const withLayout = <T extends LayoutProps>(Component: React.FC<T>) => {
 				lastComments={props.comments}
 				promotedBooks={props.promotedBooks}
 			>
-				<MainLayout>
+				<MainLayout notSidebar={props.notSidebar}>
 					<Component {...props} />
 				</MainLayout>
 			</AppContextProvider>

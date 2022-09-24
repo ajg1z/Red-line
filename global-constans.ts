@@ -127,6 +127,7 @@ export enum Pages {
 	Personal = "/personal",
 	Info = "/info",
 	Books = "/books",
+	Search = "/search",
 }
 
 export const DefaultParams = {

@@ -9,6 +9,7 @@ import cn from "classnames";
 import { Search } from "../../components";
 import { Pages } from "../../global-constans";
 import AuthModal from "./components/AuthModal/AuthModal";
+import { useRouter } from "next/router";
 
 export const MENU_ITEMS = [
 	{ label: "Люди", link: Pages.Users },
@@ -17,11 +18,20 @@ export const MENU_ITEMS = [
 
 export const Header: React.FC<HeaderProps> = () => {
 	const [isShowMenu, setIsShowMenu] = React.useState(false);
-
+	const [search, setSearch] = React.useState("");
+	const router = useRouter();
 	const [isOpen, setIsOpen] = React.useState(false);
 
 	function handleToggleMenu() {
 		setIsShowMenu(!isShowMenu);
+	}
+
+	function toSearchPage() {
+		if (!search) return;
+		router.push({
+			pathname: Pages.Search,
+			query: { q: search },
+		});
 	}
 
 	return (
@@ -32,6 +42,9 @@ export const Header: React.FC<HeaderProps> = () => {
 					<Link href={"/"}>RED-Line</Link>
 				</h2>
 				<Search
+					onChangeInput={setSearch}
+					onClick={toSearchPage}
+					value={search}
 					placeholder="Поиск"
 					classInput={styles.searchInput}
 					className={styles.search}

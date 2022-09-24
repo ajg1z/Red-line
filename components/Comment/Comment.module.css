@@ -2,11 +2,13 @@
 	display: grid;
 	grid-template-columns: 70px 1fr;
 	gap: 10px;
+
 	margin-bottom: 15px;
 }
 
 .mockImage {
 	height: 70px;
+
 	background-color: green;
 }
 
@@ -14,6 +16,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
 	margin-bottom: 5px;
 }
 
@@ -27,6 +30,7 @@
 
 .body {
 	margin-bottom: 5px;
+
 	line-height: 1.5;
 }
 
@@ -37,8 +41,9 @@
 }
 
 .action button {
-	background-color: transparent;
-	border: none;
 	cursor: pointer;
+
 	color: var(--black-blue);
+	border: none;
+	background-color: transparent;
 }

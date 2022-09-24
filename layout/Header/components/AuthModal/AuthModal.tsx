@@ -24,27 +24,27 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen, setIsOpen }) => {
 	}
 
 	return (
-		<Modal isOpen={isOpen} hideCloseIcon close={setIsOpen}>
+		<Modal id={"auth-modal"} isOpen={isOpen} hideCloseIcon close={setIsOpen}>
 			<button onClick={handleClose} className={styles.close}>
 				+
 			</button>
 			<div className={styles.top}>
-				<div
+				<button
 					onClick={() => setTypeAuth(TypeAuth.SignIn)}
 					className={cn(styles.left, {
 						[styles.selected]: typeAuth === TypeAuth.SignIn,
 					})}
 				>
 					Вход
-				</div>
-				<div
+				</button>
+				<button
 					onClick={() => setTypeAuth(TypeAuth.SignUp)}
 					className={cn(styles.right, {
 						[styles.selected]: typeAuth === TypeAuth.SignUp,
 					})}
 				>
 					Регистрация
-				</div>
+				</button>
 			</div>
 			<div className={styles.content}>{reducerContent}</div>
 		</Modal>

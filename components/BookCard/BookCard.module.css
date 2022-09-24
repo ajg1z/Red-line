@@ -19,9 +19,9 @@
 
 .title {
 	display: inline-flex;
+	align-items: flex-start;
 
 	margin-bottom: 5px;
-	align-items: flex-start;
 
 	color: var(--link-color);
 

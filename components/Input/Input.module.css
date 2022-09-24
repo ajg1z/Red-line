@@ -34,11 +34,12 @@
 }
 
 .input[type="date"] {
-	border-radius: 0;
-	height: 30px;
 	width: max-content;
+	height: 30px;
 	padding: 5px;
+
 	border-color: 1px solid var(--border-color);
+	border-radius: 0;
 	box-shadow: none;
 }
 

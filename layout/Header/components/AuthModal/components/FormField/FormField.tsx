@@ -12,6 +12,7 @@ const FormField: React.FC<FormFieldProps> = ({
 	inputClassName,
 	className,
 	key,
+	tabIndex,
 	...args
 }) => {
 	const {

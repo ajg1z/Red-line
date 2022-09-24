@@ -66,9 +66,9 @@ export const BookCard = React.forwardRef(
 							<li className={cn(styles.formWork, styles.genre)}>
 								<Link
 									href={{
-										href: Pages.Books,
+										pathname: Pages.Search,
 										query: {
-											formWork,
+											q: formWork,
 										},
 									}}
 								>
@@ -81,9 +81,9 @@ export const BookCard = React.forwardRef(
 									<li key={genre} className={styles.genre}>
 										<Link
 											href={{
-												href: Pages.Books,
+												pathname: Pages.Search,
 												query: {
-													category: genre,
+													q: genre,
 												},
 											}}
 										>
@@ -113,9 +113,9 @@ export const BookCard = React.forwardRef(
 											<li key={tag} className={styles.tag}>
 												<Link
 													href={{
-														href: Pages.Books,
+														pathname: Pages.Search,
 														query: {
-															tag,
+															q: tag,
 														},
 													}}
 												>

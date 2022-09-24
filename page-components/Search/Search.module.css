@@ -1,0 +1,19 @@
+.title p {
+	overflow: hidden;
+
+	max-width: 900px;
+	margin-top: 10px;
+
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.result p {
+	font-size: 18px;
+}
+
+@media screen and (max-width: 480px) {
+	.title {
+		font-size: 18px;
+	}
+}

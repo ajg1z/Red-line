@@ -10,19 +10,10 @@ export const Modal: React.FC<ModalProps> = ({
 	hideCloseIcon,
 	isOpen,
 	close,
+
 	...args
 }) => {
 	if (typeof document === "undefined") return <></>;
-
-	React.useEffect(() => {
-		if (isOpen) {
-			document.querySelector("html")!.style.overflow = "hidden";
-		} else document.querySelector("html")!.style.overflow = "";
-
-		return () => {
-			document.querySelector("html")!.style.overflow = "";
-		};
-	}, [isOpen]);
 
 	return ReactDOM.createPortal(
 		<div
